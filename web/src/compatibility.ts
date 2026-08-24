@@ -1,0 +1,20 @@
+export const PROLIF_COMPATIBILITY = {
+  upstream: "ProLIF",
+  targetVersion: "2.2.x",
+  portVersion: "0.1.0-alpha.0",
+  rules: {
+    Hydrophobic: "implemented",
+    HBAcceptor: "planned",
+    HBDonor: "planned",
+    XBAcceptor: "planned",
+    XBDonor: "planned",
+    Cationic: "planned",
+    Anionic: "planned",
+    CationPi: "planned",
+    PiCation: "planned",
+    PiStacking: "planned",
+    MetalDonor: "planned",
+    MetalAcceptor: "planned",
+    VdWContact: "planned",
+  },
+} as const;

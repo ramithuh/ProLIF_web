@@ -1,0 +1,37 @@
+{
+  "name": "@ramithuh/prolif-web",
+  "version": "0.1.0-alpha.0",
+  "description": "Unofficial browser-native interaction engine compatible with ProLIF 2.2.x",
+  "type": "module",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@rdkit/rdkit": "2025.3.4-1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

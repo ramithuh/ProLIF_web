@@ -173,6 +173,12 @@ $RECYCLE.BIN/
 *.npz
 *.lock
 !uv.lock
+!web/package-lock.json
 docs/notebooks/debug.log
 docs/notebooks/*.html
 *.pkl
+
+# Browser port
+web/node_modules/
+web/dist/
+web/coverage/
