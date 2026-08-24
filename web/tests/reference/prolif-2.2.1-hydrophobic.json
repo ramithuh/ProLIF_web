@@ -1,0 +1,2643 @@
+{
+  "generatedBy": "ProLIF 2.2.1",
+  "pythonRdkitVersion": "2025.03.6",
+  "rule": "Hydrophobic",
+  "cases": [
+    {
+      "name": "benzene-edge-to-face",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4050   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4049999713897705,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.4040000438690186,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.9160    0.3100    2.7170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6380   -0.1220    4.0240 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3070   -1.1360    4.2440 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9780   -1.7180    3.1550 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7000   -1.2860    1.8480 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2450   -0.2720    1.6280 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6580    1.1080    2.5450 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1650    0.3360    4.8800 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5250   -1.4750    5.2710 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.7200   -2.5160    3.3270 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2270   -1.7440    0.9920 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4630    0.0670    0.6010 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              0.9160000085830688,
+              0.3100000023841858,
+              2.7170000076293945
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.6380000114440918,
+              -0.12200000137090683,
+              4.02400016784668
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.3070000112056732,
+              -1.1360000371932983,
+              4.24399995803833
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -0.9779999852180481,
+              -1.718000054359436,
+              3.1549999713897705
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.699999988079071,
+              -1.2860000133514404,
+              1.8480000495910645
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.24500000476837158,
+              -0.2720000147819519,
+              1.628000020980835
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              1.6579999923706055,
+              1.1080000400543213,
+              2.5450000762939453
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.1649999618530273,
+              0.335999995470047,
+              4.880000114440918
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -0.5249999761581421,
+              -1.475000023841858,
+              5.270999908447266
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -1.7200000286102295,
+              -2.5160000324249268,
+              3.3269999027252197
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.2269999980926514,
+              -1.74399995803833,
+              0.9919999837875366
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              0.46299999952316284,
+              0.06700000166893005,
+              0.6010000109672546
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.7780046808026224
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 4.0982618620241045
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 4.310943956889412
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 3.082194842477079
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.017416168993554
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.8720586624533277
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 4.2410985901306395
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 3.41184877779154
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.252415816768967
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.28950589983397
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 4.447293709585637
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 4.317239498654266
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 3.1104842154518275
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.400278535194701
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.5861663773888144
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 3.6175993498754266
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 2.3589226982206797
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.333145781292094
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.51122329511445
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 4.38007001676149
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 4.263092849105928
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 3.2065877335628756
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 1.8493264154192182
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.106734206576262
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.1235494111163145
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 4.170552632879859
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 4.363028386167022
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 3.6094915067549302
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 2.3206913234443634
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 1.9365869415735266
+        }
+      ]
+    },
+    {
+      "name": "benzene-face-to-face",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4050   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4049999713897705,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.4040000438690186,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4270   -0.2160   -1.3350 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7170    0.9890   -1.2170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6850    0.9740   -1.1320 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3760   -0.2480   -1.1650 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6670   -1.4530   -1.2830 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7350   -1.4380   -1.3680 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5280   -0.2040   -1.4010 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2600    1.9500   -1.1910 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2430    1.9220   -1.0390 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4780   -0.2600   -1.0990 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2100   -2.4140   -1.3090 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2930   -2.3860   -1.4610 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4270000457763672,
+              -0.2160000056028366,
+              -1.3350000381469727
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7170000076293945,
+              0.9890000224113464,
+              -1.2170000076293945
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.6850000023841858,
+              0.9739999771118164,
+              -1.1319999694824219
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.3760000467300415,
+              -0.24799999594688416,
+              -1.1649999618530273
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.6669999957084656,
+              -1.4529999494552612,
+              -1.2829999923706055
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7350000143051147,
+              -1.437999963760376,
+              -1.3680000305175781
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.5280001163482666,
+              -0.20399999618530273,
+              -1.4010000228881836
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.2599999904632568,
+              1.9500000476837158,
+              -1.190999984741211
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.2430000305175781,
+              1.9220000505447388,
+              -1.0390000343322754
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.4779999256134033,
+              -0.25999999046325684,
+              -1.0989999771118164
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.2100000381469727,
+              -2.4140000343322754,
+              -1.309000015258789
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.2929999828338623,
+              -2.385999917984009,
+              -1.4609999656677246
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 1.352540242486655
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 1.71247014953075
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 2.5686961238529484
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 3.025341304694332
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 2.8373370785289254
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.0947954367346653
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.0876958687714513
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 1.2380803650063883
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 1.8065871112463503
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 2.796176866747384
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 3.262485333331382
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.986005472715414
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.89231573211287
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 1.8831301268223248
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 1.157703296931508
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 1.9886670958679127
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 2.961566224775623
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 3.313624720414583
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.137426112571422
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 2.637773925368863
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 1.6574260001512027
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 1.1914331323859482
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 2.07375671295565
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 2.9179769067180574
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.7046009503729693
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 2.890791419122537
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 2.4653220195467043
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 1.6578675691049374
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 1.3051754582562063
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 1.9964160861200928
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 1.818749583372089
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              1
+            ]
+          },
+          "distance": 2.518598607269721
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              2
+            ]
+          },
+          "distance": 2.8286556394968247
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "distance": 2.571445727336164
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              4
+            ]
+          },
+          "distance": 1.8911422535877462
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              5
+            ]
+          },
+          "distance": 1.3862889613146492
+        }
+      ]
+    },
+    {
+      "name": "benzene-chlorine-negative",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4050   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4049999713897705,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.4040000438690186,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  2  1  0  0  0  0  0  0  0  0999 V2000\n    1.3660    1.0670    1.2720 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0050    0.8760    2.1340 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 17,
+            "position": [
+              1.3660000562667847,
+              1.0670000314712524,
+              1.2719999551773071
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 1,
+            "position": [
+              2.005000114440918,
+              0.8759999871253967,
+              2.134000062942505
+            ]
+          }
+        ]
+      },
+      "expected": []
+    },
+    {
+      "name": "benzene-bromine",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4050   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4049999713897705,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.4040000438690186,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  2  1  0  0  0  0  0  0  0  0999 V2000\n    1.3660    1.0670    1.2720 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0050    0.8760    2.1340 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 35,
+            "position": [
+              1.3660000562667847,
+              1.0670000314712524,
+              1.2719999551773071
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 1,
+            "position": [
+              2.005000114440918,
+              0.8759999871253967,
+              2.134000062942505
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 1.6607209116857429
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 1.442595199816606
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.4324492159922286
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.2294540572491637
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              4
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 3.332671177085404
+        },
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              5
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.6964734185095387
+        }
+      ]
+    },
+    {
+      "name": "benzene-anion-negative",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4050   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4049999713897705,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.4040000438690186,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    1.3660    1.0670    1.2720 Cl  0  0  0  0  0  0  0  0  0  0  0  0\nM  CHG  1   1  -1\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 17,
+            "position": [
+              1.3660000562667847,
+              1.0670000314712524,
+              1.2719999551773071
+            ]
+          }
+        ]
+      },
+      "expected": []
+    },
+    {
+      "name": "benzene-cation-negative",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    1.4050   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020    1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020   -1.2160    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540    2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5080   -0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2540   -2.1720    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  1  6  2  0\n  5  6  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              1.4049999713897705,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              -1.4040000438690186,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              0.7020000219345093,
+              -1.215999960899353,
+              0.0
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 1,
+            "position": [
+              2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 1,
+            "position": [
+              -2.507999897003174,
+              -0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 1,
+            "position": [
+              -1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 1,
+            "position": [
+              1.253999948501587,
+              -2.171999931335449,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    0.0200   -0.0540    1.5240 Na  0  0  0  0  0 15  0  0  0  0  0  0\nM  CHG  1   1   1\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 11,
+            "position": [
+              0.019999999552965164,
+              -0.05400000140070915,
+              1.5240000486373901
+            ]
+          }
+        ]
+      },
+      "expected": []
+    },
+    {
+      "name": "inclusive-cutoff",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 Br  0  0  0  0  0 15  0  0  0  0  0  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 11,
+            "atomicNumber": 35,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    4.5000    0.0000    0.0000 Br  0  0  0  0  0 15  0  0  0  0  0  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 29,
+            "atomicNumber": 35,
+            "position": [
+              4.5,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "Hydrophobic",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              11
+            ],
+            "protein": [
+              29
+            ]
+          },
+          "distance": 4.5
+        }
+      ]
+    },
+    {
+      "name": "outside-cutoff",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 Br  0  0  0  0  0 15  0  0  0  0  0  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 13,
+            "atomicNumber": 35,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    4.5001    0.0000    0.0000 Br  0  0  0  0  0 15  0  0  0  0  0  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 31,
+            "atomicNumber": 35,
+            "position": [
+              4.5001,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "expected": []
+    }
+  ]
+}

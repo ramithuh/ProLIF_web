@@ -20,6 +20,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "parity:refresh": "python parity/generate_reference.py --output tests/reference/prolif-2.2.1-hydrophobic.json",
+    "parity:test": "vitest run tests/parity.test.ts tests/rdkit.test.ts",
     "prepack": "npm run build",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
@@ -28,6 +30,7 @@
     "@rdkit/rdkit": "2025.3.4-1.0.0"
   },
   "devDependencies": {
+    "@types/node": "24.3.0",
     "typescript": "5.9.2",
     "vitest": "4.1.11"
   },

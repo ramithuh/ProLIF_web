@@ -32,11 +32,23 @@ describe("RDKit.js SMARTS adapter", () => {
 
   it.each([
     ["C", 0],
+    ["C=[SH2]", 0],
     ["c1cscc1", 5],
     ["c1cocc1", 2],
+    ["[*]SC", 1],
+    ["[*]CC", 1],
+    ["[*]C=C", 1],
+    ["[*]=C=C", 1],
+    ["[*]C(=C)C", 1],
+    ["[*]C(C)C", 1],
+    ["CS(C)(C)C", 0],
+    ["FC(F)(F)F", 0],
     ["BrI", 2],
     ["C=O", 0],
+    ["C=N", 0],
+    ["CF", 0],
     ["Nc1ccccc1", 5],
+    ["[*]C(C)(C)C", 1],
   ])(
     "matches ProLIF's hydrophobic SMARTS count for %s",
     (smiles, expectedCount) => {
