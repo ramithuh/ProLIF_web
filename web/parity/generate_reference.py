@@ -20,7 +20,22 @@ from rdkit import Chem
 from rdkit.Geometry import Point3D
 
 from prolif.datafiles import datapath
-from prolif.interactions import Hydrophobic
+from prolif.interactions import (
+    Anionic,
+    Cationic,
+    CationPi,
+    HBAcceptor,
+    HBDonor,
+    Hydrophobic,
+    MetalAcceptor,
+    MetalDonor,
+    PiCation,
+    PiStacking,
+    VdWContact,
+    XBAcceptor,
+    XBDonor,
+)
+from prolif.interactions.base import Interaction
 from prolif.interactions.utils import get_mapindex
 from prolif.molecule import Molecule
 from prolif.residue import Residue
@@ -63,15 +78,21 @@ def serialize_component(residue: Residue) -> dict[str, Any]:
                 "position": [point.x, point.y, point.z],
             }
         )
-    return {
-        "molblock": Chem.MolToMolBlock(residue),
-        "atoms": atoms,
+    return {"molblock": Chem.MolToMolBlock(residue), "atoms": atoms}
+
+
+def normalize_metadata(
+    interaction_name: str,
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    common = {"indices", "parent_indices", "distance"}
+    geometry = {
+        key: float(value)
+        for key, value in metadata.items()
+        if key not in common and isinstance(value, (int, float, np.number))
     }
-
-
-def normalize_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
-    return {
-        "interaction": "Hydrophobic",
+    normalized: dict[str, Any] = {
+        "interaction": interaction_name,
         "indices": {
             "ligand": list(metadata["indices"]["ligand"]),
             "protein": list(metadata["indices"]["protein"]),
@@ -80,17 +101,27 @@ def normalize_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
             "ligand": list(metadata["parent_indices"]["ligand"]),
             "protein": list(metadata["parent_indices"]["protein"]),
         },
-        "distance": metadata["distance"],
+        "distance": float(metadata["distance"]),
     }
+    if geometry:
+        normalized["geometry"] = geometry
+    return normalized
 
 
-def make_case(name: str, ligand: Residue, protein: Residue) -> dict[str, Any]:
+def make_case(
+    name: str,
+    interaction_name: str,
+    rule: Interaction,
+    ligand: Residue,
+    protein: Residue,
+) -> dict[str, Any]:
     expected = [
-        normalize_metadata(metadata)
-        for metadata in Hydrophobic().detect(ligand, protein)
+        normalize_metadata(interaction_name, metadata)
+        for metadata in rule.detect(ligand, protein)
     ]
     return {
         "name": name,
+        "rule": interaction_name,
         "ligand": serialize_component(ligand),
         "protein": serialize_component(protein),
         "expected": expected,
@@ -98,25 +129,62 @@ def make_case(name: str, ligand: Residue, protein: Residue) -> dict[str, Any]:
 
 
 def generate() -> dict[str, Any]:
-    benzene = from_mol2("benzene.mol2")
-    cases = [
-        make_case("benzene-edge-to-face", benzene, from_mol2("edgetoface.mol2")),
-        make_case("benzene-face-to-face", benzene, from_mol2("facetoface.mol2")),
-        make_case("benzene-chlorine-negative", benzene, from_mol2("chlorine.mol2")),
-        make_case("benzene-bromine", benzene, from_mol2("bromine.mol2")),
-        make_case("benzene-anion-negative", benzene, from_mol2("anion.mol2")),
-        make_case("benzene-cation-negative", benzene, from_mol2("cation.mol2")),
-        make_case("inclusive-cutoff", bromine((0, 0, 0), 11), bromine((4.5, 0, 0), 29)),
-        make_case(
-            "outside-cutoff",
-            bromine((0, 0, 0), 13),
-            bromine((4.5001, 0, 0), 31),
-        ),
+    fixtures = {
+        name: from_mol2(filename)
+        for name, filename in {
+            "benzene": "benzene.mol2",
+            "edge": "edgetoface.mol2",
+            "face": "facetoface.mol2",
+            "chlorine": "chlorine.mol2",
+            "bromine": "bromine.mol2",
+            "anion": "anion.mol2",
+            "cation": "cation.mol2",
+            "cation_false": "cation_false.mol2",
+            "acceptor": "acceptor.mol2",
+            "acceptor_false": "acceptor_false.mol2",
+            "donor": "donor.mol2",
+            "xb_acceptor": "xbond_acceptor.mol2",
+            "xb_acceptor_false_xar": "xbond_acceptor_false_xar.mol2",
+            "xb_acceptor_false_axd": "xbond_acceptor_false_axd.mol2",
+            "xb_donor": "xbond_donor.mol2",
+            "metal": "metal.mol2",
+            "metal_false": "metal_false.mol2",
+            "chelator": "ligand.mol2",
+        }.items()
+    }
+
+    definitions: list[tuple[str, str, Interaction, Residue, Residue]] = [
+        ("hydrophobic-edge", "Hydrophobic", Hydrophobic(), fixtures["benzene"], fixtures["edge"]),
+        ("hydrophobic-negative", "Hydrophobic", Hydrophobic(), fixtures["benzene"], fixtures["chlorine"]),
+        ("hydrophobic-inclusive-cutoff", "Hydrophobic", Hydrophobic(), bromine((0, 0, 0), 11), bromine((4.5, 0, 0), 29)),
+        ("hydrophobic-outside-cutoff", "Hydrophobic", Hydrophobic(), bromine((0, 0, 0), 13), bromine((4.5001, 0, 0), 31)),
+        ("hbond-acceptor", "HBAcceptor", HBAcceptor(), fixtures["acceptor"], fixtures["donor"]),
+        ("hbond-acceptor-negative", "HBAcceptor", HBAcceptor(), fixtures["acceptor_false"], fixtures["donor"]),
+        ("hbond-donor", "HBDonor", HBDonor(), fixtures["donor"], fixtures["acceptor"]),
+        ("hbond-donor-negative", "HBDonor", HBDonor(), fixtures["donor"], fixtures["acceptor_false"]),
+        ("halogen-acceptor", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor"], fixtures["xb_donor"]),
+        ("halogen-acceptor-xar-negative", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor_false_xar"], fixtures["xb_donor"]),
+        ("halogen-acceptor-axd-negative", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor_false_axd"], fixtures["xb_donor"]),
+        ("halogen-donor", "XBDonor", XBDonor(), fixtures["xb_donor"], fixtures["xb_acceptor"]),
+        ("cationic", "Cationic", Cationic(), fixtures["cation"], fixtures["anion"]),
+        ("cationic-negative", "Cationic", Cationic(), fixtures["cation_false"], fixtures["anion"]),
+        ("anionic", "Anionic", Anionic(), fixtures["anion"], fixtures["cation"]),
+        ("cation-pi", "CationPi", CationPi(), fixtures["cation"], fixtures["benzene"]),
+        ("cation-pi-negative", "CationPi", CationPi(), fixtures["cation_false"], fixtures["benzene"]),
+        ("pi-cation", "PiCation", PiCation(), fixtures["benzene"], fixtures["cation"]),
+        ("pi-stacking-face", "PiStacking", PiStacking(), fixtures["benzene"], fixtures["face"]),
+        ("pi-stacking-edge", "PiStacking", PiStacking(), fixtures["benzene"], fixtures["edge"]),
+        ("metal-donor", "MetalDonor", MetalDonor(), fixtures["metal"], fixtures["chelator"]),
+        ("metal-donor-negative", "MetalDonor", MetalDonor(), fixtures["metal_false"], fixtures["chelator"]),
+        ("metal-acceptor", "MetalAcceptor", MetalAcceptor(), fixtures["chelator"], fixtures["metal"]),
+        ("vdw-contact", "VdWContact", VdWContact(), fixtures["benzene"], fixtures["edge"]),
+        ("vdw-negative", "VdWContact", VdWContact(), fixtures["acceptor"], fixtures["metal_false"]),
     ]
+    cases = [make_case(*definition) for definition in definitions]
     return {
         "generatedBy": f"ProLIF {prolif.__version__}",
         "pythonRdkitVersion": rdkit.__version__,
-        "rule": "Hydrophobic",
+        "rules": sorted({case["rule"] for case in cases}),
         "cases": cases,
     }
 
