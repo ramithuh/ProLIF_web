@@ -49,4 +49,4 @@ jobs:
           --output /tmp/prolif-2.2.1-core.json
 
       - name: Require committed oracle to be current
-        run: cmp web/tests/reference/prolif-2.2.1-core.json /tmp/prolif-2.2.1-core.json
+        run: diff -u web/tests/reference/prolif-2.2.1-core.json /tmp/prolif-2.2.1-core.json

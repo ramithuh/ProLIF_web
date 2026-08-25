@@ -18,7 +18,6 @@ from MDAnalysis.topology.guessers import guess_atom_element
 from rdkit import Chem
 from rdkit.Geometry import Point3D
 
-import prolif
 from prolif.datafiles import datapath
 from prolif.interactions import (
     Anionic,
@@ -600,7 +599,9 @@ def generate() -> dict[str, Any]:
         ),
     ]
     return {
-        "generatedBy": f"ProLIF {prolif.__version__}",
+        # Editable and CI builds can report 0.0.0 for this same source tree.
+        # Keep oracle provenance tied to the rule version instead of packaging.
+        "generatedBy": "ProLIF 2.2.1",
         "pythonRdkitVersion": rdkit.__version__,
         "rules": sorted({case["rule"] for case in cases}),
         "cases": cases,
