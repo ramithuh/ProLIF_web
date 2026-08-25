@@ -43,9 +43,12 @@ jobs:
       - name: Sync Python ProLIF test dependencies
         run: uv sync --group tests --locked
 
+      - name: Match the browser oracle RDKit release
+        run: uv pip install --python .venv/bin/python rdkit==2025.3.6
+
       - name: Regenerate Python oracle
         run: >-
-          uv run python web/parity/generate_reference.py
+          uv run --no-sync python web/parity/generate_reference.py
           --output /tmp/prolif-2.2.1-core.json
 
       - name: Require committed oracle to be current

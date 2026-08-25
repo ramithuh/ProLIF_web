@@ -43,6 +43,11 @@ from prolif.molecule import Molecule, sdf_supplier
 from prolif.residue import Residue
 
 
+def stable_float(value: float | np.number) -> float:
+    """Remove platform-level floating point noise from committed fixtures."""
+    return round(float(value), 12)
+
+
 def from_mol2(filename: str) -> Residue:
     """Load the same interaction fixtures used by ProLIF's Python tests."""
     universe = Universe(str(datapath / filename))
@@ -93,11 +98,11 @@ def normalize_metadata(
         if key in common:
             continue
         if isinstance(value, (int, float, np.number)):
-            geometry[key] = float(value)
+            geometry[key] = stable_float(value)
         elif isinstance(value, (list, tuple, np.ndarray)) and all(
             isinstance(item, (int, float, np.number)) for item in value
         ):
-            geometry[key] = [float(item) for item in value]
+            geometry[key] = [stable_float(item) for item in value]
     normalized: dict[str, Any] = {
         "interaction": interaction_name,
         "indices": {
@@ -108,7 +113,7 @@ def normalize_metadata(
             "ligand": list(metadata["parent_indices"]["ligand"]),
             "protein": list(metadata["parent_indices"]["protein"]),
         },
-        "distance": float(metadata["distance"]),
+        "distance": stable_float(metadata["distance"]),
     }
     if geometry:
         normalized["geometry"] = geometry

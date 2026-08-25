@@ -291,7 +291,7 @@
               0
             ]
           },
-          "distance": 2.7780046808026224
+          "distance": 2.778004680803
         },
         {
           "interaction": "Hydrophobic",
@@ -311,7 +311,7 @@
               1
             ]
           },
-          "distance": 4.0982618620241045
+          "distance": 4.098261862024
         },
         {
           "interaction": "Hydrophobic",
@@ -331,7 +331,7 @@
               3
             ]
           },
-          "distance": 4.310943956889412
+          "distance": 4.310943956889
         },
         {
           "interaction": "Hydrophobic",
@@ -351,7 +351,7 @@
               4
             ]
           },
-          "distance": 3.082194842477079
+          "distance": 3.082194842477
         },
         {
           "interaction": "Hydrophobic",
@@ -371,7 +371,7 @@
               5
             ]
           },
-          "distance": 2.017416168993554
+          "distance": 2.017416168994
         },
         {
           "interaction": "Hydrophobic",
@@ -391,7 +391,7 @@
               0
             ]
           },
-          "distance": 2.8720586624533277
+          "distance": 2.872058662453
         },
         {
           "interaction": "Hydrophobic",
@@ -411,7 +411,7 @@
               1
             ]
           },
-          "distance": 4.2410985901306395
+          "distance": 4.241098590131
         },
         {
           "interaction": "Hydrophobic",
@@ -431,7 +431,7 @@
               4
             ]
           },
-          "distance": 3.41184877779154
+          "distance": 3.411848777792
         },
         {
           "interaction": "Hydrophobic",
@@ -451,7 +451,7 @@
               5
             ]
           },
-          "distance": 2.252415816768967
+          "distance": 2.252415816769
         },
         {
           "interaction": "Hydrophobic",
@@ -471,7 +471,7 @@
               0
             ]
           },
-          "distance": 3.28950589983397
+          "distance": 3.289505899834
         },
         {
           "interaction": "Hydrophobic",
@@ -491,7 +491,7 @@
               1
             ]
           },
-          "distance": 4.447293709585637
+          "distance": 4.447293709586
         },
         {
           "interaction": "Hydrophobic",
@@ -511,7 +511,7 @@
               3
             ]
           },
-          "distance": 4.317239498654266
+          "distance": 4.317239498654
         },
         {
           "interaction": "Hydrophobic",
@@ -531,7 +531,7 @@
               4
             ]
           },
-          "distance": 3.1104842154518275
+          "distance": 3.110484215452
         },
         {
           "interaction": "Hydrophobic",
@@ -551,7 +551,7 @@
               5
             ]
           },
-          "distance": 2.400278535194701
+          "distance": 2.400278535195
         },
         {
           "interaction": "Hydrophobic",
@@ -571,7 +571,7 @@
               0
             ]
           },
-          "distance": 3.5861663773888144
+          "distance": 3.586166377389
         },
         {
           "interaction": "Hydrophobic",
@@ -591,7 +591,7 @@
               3
             ]
           },
-          "distance": 3.6175993498754266
+          "distance": 3.617599349875
         },
         {
           "interaction": "Hydrophobic",
@@ -611,7 +611,7 @@
               4
             ]
           },
-          "distance": 2.3589226982206797
+          "distance": 2.358922698221
         },
         {
           "interaction": "Hydrophobic",
@@ -631,7 +631,7 @@
               5
             ]
           },
-          "distance": 2.333145781292094
+          "distance": 2.333145781292
         },
         {
           "interaction": "Hydrophobic",
@@ -651,7 +651,7 @@
               0
             ]
           },
-          "distance": 3.51122329511445
+          "distance": 3.511223295114
         },
         {
           "interaction": "Hydrophobic",
@@ -671,7 +671,7 @@
               1
             ]
           },
-          "distance": 4.38007001676149
+          "distance": 4.380070016761
         },
         {
           "interaction": "Hydrophobic",
@@ -691,7 +691,7 @@
               2
             ]
           },
-          "distance": 4.263092849105928
+          "distance": 4.263092849106
         },
         {
           "interaction": "Hydrophobic",
@@ -711,7 +711,7 @@
               3
             ]
           },
-          "distance": 3.2065877335628756
+          "distance": 3.206587733563
         },
         {
           "interaction": "Hydrophobic",
@@ -731,7 +731,7 @@
               4
             ]
           },
-          "distance": 1.8493264154192182
+          "distance": 1.849326415419
         },
         {
           "interaction": "Hydrophobic",
@@ -751,7 +751,7 @@
               5
             ]
           },
-          "distance": 2.106734206576262
+          "distance": 2.106734206576
         },
         {
           "interaction": "Hydrophobic",
@@ -771,7 +771,7 @@
               0
             ]
           },
-          "distance": 3.1235494111163145
+          "distance": 3.123549411116
         },
         {
           "interaction": "Hydrophobic",
@@ -791,7 +791,7 @@
               1
             ]
           },
-          "distance": 4.170552632879859
+          "distance": 4.17055263288
         },
         {
           "interaction": "Hydrophobic",
@@ -811,7 +811,7 @@
               2
             ]
           },
-          "distance": 4.363028386167022
+          "distance": 4.363028386167
         },
         {
           "interaction": "Hydrophobic",
@@ -831,7 +831,7 @@
               3
             ]
           },
-          "distance": 3.6094915067549302
+          "distance": 3.609491506755
         },
         {
           "interaction": "Hydrophobic",
@@ -851,7 +851,7 @@
               4
             ]
           },
-          "distance": 2.3206913234443634
+          "distance": 2.320691323444
         },
         {
           "interaction": "Hydrophobic",
@@ -871,7 +871,7 @@
               5
             ]
           },
-          "distance": 1.9365869415735266
+          "distance": 1.936586941574
         }
       ]
     },
@@ -1215,9 +1215,9 @@
               1
             ]
           },
-          "distance": 2.3363567893739194,
+          "distance": 2.336356789374,
           "geometry": {
-            "DHA_angle": 160.2107964130389
+            "DHA_angle": 160.210796413039
           }
         }
       ]
@@ -1391,9 +1391,9 @@
               2
             ]
           },
-          "distance": 2.3363567893739194,
+          "distance": 2.336356789374,
           "geometry": {
-            "DHA_angle": 160.2107964130389
+            "DHA_angle": 160.210796413039
           }
         }
       ]
@@ -1815,21 +1815,21 @@
               11
             ]
           },
-          "distance": 2.7428045865500525,
+          "distance": 2.74280458655,
           "geometry": {
             "ideal_acceptor_angle": 120.0,
             "acceptor_atom_angles": [
-              119.56582217170318
+              119.565822171703
             ],
-            "acceptor_atom_angle_deviation": 0.43417782829682494,
-            "acceptor_plane_angle": 14.191233519808888,
+            "acceptor_atom_angle_deviation": 0.434177828297,
+            "acceptor_plane_angle": 14.191233519809,
             "ideal_donor_angle": 120.0,
             "donor_atom_angles": [
-              140.58040843212183
+              140.580408432122
             ],
-            "donor_atom_angle_deviation": 20.58040843212183,
-            "donor_plane_angle": 1.9892680854814626,
-            "vina_hbond_potential": 0.9921165792423713
+            "donor_atom_angle_deviation": 20.580408432122,
+            "donor_plane_angle": 1.989268085481,
+            "vina_hbond_potential": 0.992116579242
           }
         }
       ]
@@ -2126,20 +2126,20 @@
               0
             ]
           },
-          "distance": 2.60260427264692,
+          "distance": 2.602604272647,
           "geometry": {
             "ideal_acceptor_angle": 120.0,
             "acceptor_atom_angles": [
-              98.97972105817969
+              98.97972105818
             ],
-            "acceptor_atom_angle_deviation": 21.020278941820308,
-            "acceptor_plane_angle": 2.5383498575257653,
+            "acceptor_atom_angle_deviation": 21.02027894182,
+            "acceptor_plane_angle": 2.538349857526,
             "ideal_donor_angle": 109.5,
             "donor_atom_angles": [
-              98.34675990410959
+              98.34675990411
             ],
-            "donor_atom_angle_deviation": 11.15324009589041,
-            "vina_hbond_potential": 0.9721168963162423
+            "donor_atom_angle_deviation": 11.15324009589,
+            "vina_hbond_potential": 0.972116896316
           }
         }
       ]
@@ -2651,21 +2651,21 @@
               2508
             ]
           },
-          "distance": 2.7428045865500525,
+          "distance": 2.74280458655,
           "geometry": {
             "ideal_acceptor_angle": 120.0,
             "acceptor_atom_angles": [
-              119.56582217170318
+              119.565822171703
             ],
-            "acceptor_atom_angle_deviation": 0.43417782829682494,
-            "acceptor_plane_angle": 14.191233519808888,
+            "acceptor_atom_angle_deviation": 0.434177828297,
+            "acceptor_plane_angle": 14.191233519809,
             "ideal_donor_angle": 120.0,
             "donor_atom_angles": [
-              140.58040843212183
+              140.580408432122
             ],
-            "donor_atom_angle_deviation": 20.58040843212183,
-            "donor_plane_angle": 1.9892680854814626,
-            "vina_hbond_potential": 0.9921165792423713
+            "donor_atom_angle_deviation": 20.580408432122,
+            "donor_plane_angle": 1.989268085481,
+            "vina_hbond_potential": 0.992116579242
           }
         }
       ]
@@ -2981,10 +2981,10 @@
               1
             ]
           },
-          "distance": 1.4297338272802118,
+          "distance": 1.42973382728,
           "geometry": {
-            "AXD_angle": 176.5019773321026,
-            "XAR_angle": 108.42315083433415
+            "AXD_angle": 176.501977332103,
+            "XAR_angle": 108.423150834334
           }
         }
       ]
@@ -3385,10 +3385,10 @@
               1
             ]
           },
-          "distance": 1.4297338272802118,
+          "distance": 1.42973382728,
           "geometry": {
-            "AXD_angle": 176.5019773321026,
-            "XAR_angle": 108.42315083433415
+            "AXD_angle": 176.501977332103,
+            "XAR_angle": 108.423150834334
           }
         }
       ]
@@ -3570,7 +3570,7 @@
               0
             ]
           },
-          "distance": 1.7697065501027098
+          "distance": 1.769706550103
         }
       ]
     },
@@ -3771,7 +3771,7 @@
               0
             ]
           },
-          "distance": 1.7697065501027098
+          "distance": 1.769706550103
         }
       ]
     },
@@ -4092,9 +4092,9 @@
               5
             ]
           },
-          "distance": 1.525085410713312,
+          "distance": 1.525085410713,
           "geometry": {
-            "angle": 2.161740842758519
+            "angle": 2.161740842759
           }
         }
       ]
@@ -4416,9 +4416,9 @@
               0
             ]
           },
-          "distance": 1.525085410713312,
+          "distance": 1.525085410713,
           "geometry": {
-            "angle": 2.161740842758519
+            "angle": 2.161740842759
           }
         }
       ]
@@ -4860,10 +4860,10 @@
               5
             ]
           },
-          "distance": 1.2715930930294193,
+          "distance": 1.271593093029,
           "geometry": {
-            "plane_angle": 4.975725081916349,
-            "normal_to_centroid_angle": 169.42604475127422
+            "plane_angle": 4.975725081916,
+            "normal_to_centroid_angle": 169.426044751274
           }
         }
       ]
@@ -5160,11 +5160,11 @@
               5
             ]
           },
-          "distance": 3.0193846325900053,
+          "distance": 3.01938463259,
           "geometry": {
-            "plane_angle": 94.27246090199426,
-            "normal_to_centroid_angle": 13.496647787140018,
-            "intersect_distance": 0.24468324973927702
+            "plane_angle": 94.272460901994,
+            "normal_to_centroid_angle": 13.49664778714,
+            "intersect_distance": 0.244683249739
           }
         }
       ]
@@ -5406,7 +5406,7 @@
               3
             ]
           },
-          "distance": 1.1123834715916163
+          "distance": 1.112383471592
         }
       ]
     },
@@ -5557,7 +5557,7 @@
               0
             ]
           },
-          "distance": 1.1123834715916163
+          "distance": 1.112383471592
         }
       ]
     },
@@ -5898,7 +5898,7 @@
               0
             ]
           },
-          "distance": 2.7780046808026224
+          "distance": 2.778004680803
         },
         {
           "interaction": "VdWContact",
@@ -5918,7 +5918,7 @@
               4
             ]
           },
-          "distance": 3.082194842477079
+          "distance": 3.082194842477
         },
         {
           "interaction": "VdWContact",
@@ -5938,11 +5938,19 @@
               5
             ]
           },
-          "distance": 2.017416168993554
+          "distance": 2.017416168994
         },
         {
           "interaction": "VdWContact",
           "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              6
+            ]
+          },
+          "parentIndices": {
             "ligand": [
               0
             ],
@@ -5950,15 +5958,7 @@
               6
             ]
           },
-          "parentIndices": {
-            "ligand": [
-              0
-            ],
-            "protein": [
-              6
-            ]
-          },
-          "distance": 2.7872385057100635
+          "distance": 2.78723850571
         },
         {
           "interaction": "VdWContact",
@@ -5978,7 +5978,7 @@
               11
             ]
           },
-          "distance": 1.1193989281766203
+          "distance": 1.119398928177
         },
         {
           "interaction": "VdWContact",
@@ -5998,7 +5998,7 @@
               0
             ]
           },
-          "distance": 2.8720586624533277
+          "distance": 2.872058662453
         },
         {
           "interaction": "VdWContact",
@@ -6018,7 +6018,7 @@
               5
             ]
           },
-          "distance": 2.252415816768967
+          "distance": 2.252415816769
         },
         {
           "interaction": "VdWContact",
@@ -6038,7 +6038,7 @@
               6
             ]
           },
-          "distance": 2.7207766013975747
+          "distance": 2.720776601398
         },
         {
           "interaction": "VdWContact",
@@ -6058,7 +6058,7 @@
               11
             ]
           },
-          "distance": 1.318530595096973
+          "distance": 1.318530595097
         },
         {
           "interaction": "VdWContact",
@@ -6078,7 +6078,7 @@
               0
             ]
           },
-          "distance": 3.28950589983397
+          "distance": 3.289505899834
         },
         {
           "interaction": "VdWContact",
@@ -6098,7 +6098,7 @@
               4
             ]
           },
-          "distance": 3.1104842154518275
+          "distance": 3.110484215452
         },
         {
           "interaction": "VdWContact",
@@ -6118,7 +6118,7 @@
               5
             ]
           },
-          "distance": 2.400278535194701
+          "distance": 2.400278535195
         },
         {
           "interaction": "VdWContact",
@@ -6138,7 +6138,7 @@
               11
             ]
           },
-          "distance": 1.7431657894447476
+          "distance": 1.743165789445
         },
         {
           "interaction": "VdWContact",
@@ -6158,7 +6158,7 @@
               4
             ]
           },
-          "distance": 2.3589226982206797
+          "distance": 2.358922698221
         },
         {
           "interaction": "VdWContact",
@@ -6178,7 +6178,7 @@
               5
             ]
           },
-          "distance": 2.333145781292094
+          "distance": 2.333145781292
         },
         {
           "interaction": "VdWContact",
@@ -6198,7 +6198,7 @@
               10
             ]
           },
-          "distance": 2.014181927651275
+          "distance": 2.014181927651
         },
         {
           "interaction": "VdWContact",
@@ -6218,7 +6218,7 @@
               11
             ]
           },
-          "distance": 1.9624931020089431
+          "distance": 1.962493102009
         },
         {
           "interaction": "VdWContact",
@@ -6238,7 +6238,7 @@
               3
             ]
           },
-          "distance": 3.2065877335628756
+          "distance": 3.206587733563
         },
         {
           "interaction": "VdWContact",
@@ -6258,7 +6258,7 @@
               4
             ]
           },
-          "distance": 1.8493264154192182
+          "distance": 1.849326415419
         },
         {
           "interaction": "VdWContact",
@@ -6278,7 +6278,7 @@
               5
             ]
           },
-          "distance": 2.106734206576262
+          "distance": 2.106734206576
         },
         {
           "interaction": "VdWContact",
@@ -6298,7 +6298,7 @@
               10
             ]
           },
-          "distance": 1.2403519419016855
+          "distance": 1.240351941902
         },
         {
           "interaction": "VdWContact",
@@ -6318,7 +6318,7 @@
               11
             ]
           },
-          "distance": 1.8342614227882656
+          "distance": 1.834261422788
         },
         {
           "interaction": "VdWContact",
@@ -6338,7 +6338,7 @@
               0
             ]
           },
-          "distance": 3.1235494111163145
+          "distance": 3.123549411116
         },
         {
           "interaction": "VdWContact",
@@ -6358,7 +6358,7 @@
               4
             ]
           },
-          "distance": 2.3206913234443634
+          "distance": 2.320691323444
         },
         {
           "interaction": "VdWContact",
@@ -6378,7 +6378,7 @@
               5
             ]
           },
-          "distance": 1.9365869415735266
+          "distance": 1.936586941574
         },
         {
           "interaction": "VdWContact",
@@ -6398,7 +6398,7 @@
               10
             ]
           },
-          "distance": 2.2324625511031577
+          "distance": 2.232462551103
         },
         {
           "interaction": "VdWContact",
@@ -6418,7 +6418,7 @@
               11
             ]
           },
-          "distance": 1.4368058072841576
+          "distance": 1.436805807284
         },
         {
           "interaction": "VdWContact",
@@ -6438,7 +6438,7 @@
               11
             ]
           },
-          "distance": 2.132537126077652
+          "distance": 2.132537126078
         },
         {
           "interaction": "VdWContact",
@@ -6458,7 +6458,7 @@
               4
             ]
           },
-          "distance": 2.1229733851615746
+          "distance": 2.122973385162
         },
         {
           "interaction": "VdWContact",
@@ -6478,7 +6478,7 @@
               10
             ]
           },
-          "distance": 1.0807298192882866
+          "distance": 1.080729819288
         },
         {
           "interaction": "VdWContact",
@@ -6498,7 +6498,7 @@
               5
             ]
           },
-          "distance": 2.6978629760739383
+          "distance": 2.697862976074
         }
       ]
     },
