@@ -51,6 +51,22 @@ interaction multiplicity, participating local and parent atom indices,
 distances, rule-specific angles, positive and negative examples, and inclusive
 distance cutoffs across all implemented interaction families.
 
+The accuracy gate is quantitative. At the current compatibility target it
+contains:
+
+- 35 end-to-end rule cases, with at least one positive and one negative oracle
+  case for every implemented interaction;
+- 210 Python-generated SMARTS cases covering 13 distinct query roles, both
+  implicit- and explicit-hydrogen molecular graphs where applicable;
+- exact comparison of matched atom indices, event multiplicity, direction,
+  parent-atom mapping, distances, and rule-specific geometry;
+- an aggregate corpus requirement of 100% event precision and 100% event
+  recall.
+
+Minimum corpus sizes are asserted in the tests so a fixture refresh cannot
+silently reduce coverage. These numbers measure parity on the committed oracle
+corpus; they are not a claim of perfect behavior on every possible molecule.
+
 ```bash
 # Requires Python ProLIF's development environment.
 npm run parity:refresh

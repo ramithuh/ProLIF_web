@@ -8,8 +8,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
+
+# Always compare against the checked-out Python implementation, even when this
+# script is launched from the nested web package.
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPOSITORY_ROOT))
 
 import numpy as np
 import prolif
@@ -135,6 +141,55 @@ def make_case(
     }
 
 
+def residue_from_smiles(smiles: str, *, add_hydrogens: bool) -> Residue:
+    molecule = Chem.MolFromSmiles(smiles)
+    if molecule is None:
+        raise RuntimeError(f"RDKit could not parse SMARTS parity molecule {smiles!r}")
+    if add_hydrogens:
+        molecule = Chem.AddHs(molecule)
+    conformer = Chem.Conformer(molecule.GetNumAtoms())
+    for index, atom in enumerate(molecule.GetAtoms()):
+        conformer.SetAtomPosition(index, Point3D(float(index), 0.0, 0.0))
+        atom.SetUnsignedProp("mapindex", index)
+    molecule.AddConformer(conformer)
+    return Residue(molecule)
+
+
+def make_smarts_cases(
+    pattern_key: str,
+    queries: Chem.Mol | list[Chem.Mol],
+    smiles_values: list[str],
+    *,
+    hydrogen_modes: tuple[bool, ...] = (False, True),
+) -> list[dict[str, Any]]:
+    query_list = queries if isinstance(queries, list) else [queries]
+    output = []
+    for smiles in smiles_values:
+        for add_hydrogens in hydrogen_modes:
+            component = residue_from_smiles(
+                smiles,
+                add_hydrogens=add_hydrogens,
+            )
+            expected_matches = [
+                list(match)
+                for query in query_list
+                for match in component.GetSubstructMatches(query)
+            ]
+            output.append(
+                {
+                    "name": (
+                        f"{pattern_key}:{smiles}:"
+                        f"{'explicit-h' if add_hydrogens else 'implicit-h'}"
+                    ),
+                    "patternKey": pattern_key,
+                    "pythonSmarts": [Chem.MolToSmarts(query) for query in query_list],
+                    "component": serialize_component(component),
+                    "expectedMatches": expected_matches,
+                }
+            )
+    return output
+
+
 def generate() -> dict[str, Any]:
     fixtures = {
         name: from_mol2(filename)
@@ -183,31 +238,127 @@ def generate() -> dict[str, Any]:
         ("hbond-donor-negative", "HBDonor", HBDonor(), fixtures["donor"], fixtures["acceptor_false"]),
         ("implicit-hbond-acceptor-tyr", "ImplicitHBAcceptor", ImplicitHBAcceptor(), implicit_tyr, implicit_ligand),
         ("implicit-hbond-acceptor-asp", "ImplicitHBAcceptor", ImplicitHBAcceptor(), implicit_asp, implicit_ligand),
+        ("implicit-hbond-acceptor-negative", "ImplicitHBAcceptor", ImplicitHBAcceptor(), implicit_tyr, fixtures["chlorine"]),
         ("implicit-hbond-donor", "ImplicitHBDonor", ImplicitHBDonor(), implicit_ligand, implicit_tyr),
+        ("implicit-hbond-donor-negative", "ImplicitHBDonor", ImplicitHBDonor(), fixtures["chlorine"], implicit_tyr),
         ("halogen-acceptor", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor"], fixtures["xb_donor"]),
         ("halogen-acceptor-xar-negative", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor_false_xar"], fixtures["xb_donor"]),
         ("halogen-acceptor-axd-negative", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor_false_axd"], fixtures["xb_donor"]),
         ("halogen-donor", "XBDonor", XBDonor(), fixtures["xb_donor"], fixtures["xb_acceptor"]),
+        ("halogen-donor-negative", "XBDonor", XBDonor(), fixtures["xb_donor"], fixtures["xb_acceptor_false_xar"]),
         ("cationic", "Cationic", Cationic(), fixtures["cation"], fixtures["anion"]),
-        ("cationic-negative", "Cationic", Cationic(), fixtures["cation_false"], fixtures["anion"]),
+        ("cationic-negative", "Cationic", Cationic(), fixtures["cation"], fixtures["benzene"]),
         ("anionic", "Anionic", Anionic(), fixtures["anion"], fixtures["cation"]),
+        ("anionic-negative", "Anionic", Anionic(), fixtures["anion"], fixtures["benzene"]),
         ("cation-pi", "CationPi", CationPi(), fixtures["cation"], fixtures["benzene"]),
         ("cation-pi-negative", "CationPi", CationPi(), fixtures["cation_false"], fixtures["benzene"]),
         ("pi-cation", "PiCation", PiCation(), fixtures["benzene"], fixtures["cation"]),
+        ("pi-cation-negative", "PiCation", PiCation(), fixtures["benzene"], fixtures["cation_false"]),
         ("pi-stacking-face", "PiStacking", PiStacking(), fixtures["benzene"], fixtures["face"]),
         ("pi-stacking-edge", "PiStacking", PiStacking(), fixtures["benzene"], fixtures["edge"]),
+        ("pi-stacking-negative", "PiStacking", PiStacking(), fixtures["benzene"], fixtures["chlorine"]),
         ("metal-donor", "MetalDonor", MetalDonor(), fixtures["metal"], fixtures["chelator"]),
         ("metal-donor-negative", "MetalDonor", MetalDonor(), fixtures["metal_false"], fixtures["chelator"]),
         ("metal-acceptor", "MetalAcceptor", MetalAcceptor(), fixtures["chelator"], fixtures["metal"]),
+        ("metal-acceptor-negative", "MetalAcceptor", MetalAcceptor(), fixtures["chelator"], fixtures["metal_false"]),
         ("vdw-contact", "VdWContact", VdWContact(), fixtures["benzene"], fixtures["edge"]),
         ("vdw-negative", "VdWContact", VdWContact(), fixtures["acceptor"], fixtures["metal_false"]),
     ]
     cases = [make_case(*definition) for definition in definitions]
+
+    hydrophobic = Hydrophobic()
+    explicit_hbond = HBAcceptor()
+    implicit_hbond = ImplicitHBAcceptor()
+    halogen = XBAcceptor()
+    ionic = Cationic()
+    cation_pi = CationPi()
+    metal = MetalDonor()
+    smarts_cases = [
+        *make_smarts_cases(
+            "Hydrophobic.lig_pattern",
+            hydrophobic.lig_pattern,
+            [
+                "C", "C=[SH2]", "c1cscc1", "c1cocc1", "[*]SC", "[*]CC",
+                "[*]C=C", "[*]=C=C", "[*]C(=C)C", "[*]C(C)C", "CS(C)(C)C",
+                "FC(F)(F)F", "BrI", "C=O", "C=N", "CF", "Nc1ccccc1",
+                "[*]C(C)(C)C",
+            ],
+        ),
+        *make_smarts_cases(
+            "HBAcceptor.lig_pattern",
+            explicit_hbond.lig_pattern,
+            [
+                "O", "N", "[NH4+]", "C-N-C=O", "N-C=[SH2]", "[nH+]1ccccc1",
+                "n1ccccc1", "n(C)1cccc1", "[nH]1cccc1", "[nH+]1nc[nH]c1",
+                "c12c([nH]cc1)cccc2", "Nc1ccccc1", "C(=N)(N)N", "N#C",
+                "o1cccc1", "[o+](C)1cccc1", "[*]-[N+](=O)-[O-]", "COC=O",
+                "c1ccccc1Oc1ccccc1", "FC", "Fc1ccccc1", "FCF",
+                "c1cc[n+](cc1)[O-]",
+            ],
+        ),
+        *make_smarts_cases(
+            "HBAcceptor.prot_pattern",
+            explicit_hbond.prot_pattern,
+            ["[OH2]", "[NH3]", "[NH4+]", "[SH2]", "O=C=O", "c1c[nH+]ccc1", "c1c[nH]cc1", "C-N-C=O"],
+            hydrogen_modes=(True,),
+        ),
+        *make_smarts_cases(
+            "ImplicitHBAcceptor.lig_pattern",
+            implicit_hbond.lig_pattern,
+            ["O", "N", "[NH4+]", "n1ccccc1", "[nH]1cccc1", "C(=N)(N)N", "COC=O"],
+        ),
+        *make_smarts_cases(
+            "ImplicitHBAcceptor.prot_pattern",
+            implicit_hbond.prot_pattern,
+            ["O", "N", "[NH4+]", "[SH2]", "c1c[nH+]ccc1", "c1c[nH]cc1", "C-N-C=O"],
+        ),
+        *make_smarts_cases(
+            "XBAcceptor.lig_pattern",
+            halogen.lig_pattern,
+            ["[NH3]", "[NH+]C", "c1ccccc1", "C(=O)C", "C#N"],
+        ),
+        *make_smarts_cases(
+            "XBAcceptor.prot_pattern",
+            halogen.prot_pattern,
+            ["CCl", "c1ccccc1Cl", "NCl", "c1cccc[n+]1Cl", "CC"],
+        ),
+        *make_smarts_cases(
+            "Cationic.lig_pattern",
+            ionic.lig_pattern,
+            ["[NH4+]", "[Ca+2]", "CC(=[NH2+])N", "NC(=[NH2+])N", "c1cc[n+](cc1)[O-]", "C-N=[N+]=[N-]", "N#[N+]-[N-2]"],
+        ),
+        *make_smarts_cases(
+            "Cationic.prot_pattern",
+            ionic.prot_pattern,
+            ["[Cl-]", "CC(=O)[O-]", "CS(=O)[O-]", "CP(=O)[O-]", "c1cc[n+](cc1)[O-]", "C-N=[N+]=[N-]"],
+        ),
+        *make_smarts_cases(
+            "CationPi.cation",
+            cation_pi.cation,
+            ["[NH4+]", "[Ca+2]", "CC(=[NH2+])N", "NC(=[NH2+])N", "C-N=[N+]=[N-]", "N#[N+]-[N-2]"],
+        ),
+        *make_smarts_cases(
+            "CationPi.pi_ring",
+            cation_pi.pi_ring,
+            ["c1ccccc1", "c1cocc1", "C1CCCCC1", "CC"],
+        ),
+        *make_smarts_cases(
+            "MetalDonor.lig_pattern",
+            metal.lig_pattern,
+            ["[Mg]", "[Zn]", "[Na+]", "O"],
+        ),
+        *make_smarts_cases(
+            "MetalDonor.prot_pattern",
+            metal.prot_pattern,
+            ["O", "N", "[NH+]", "N-C=[SH2]", "[nH+]1ccccc1", "Nc1ccccc1", "o1cccc1", "COC=O", "[*]-[N+](=O)-[O-]"],
+        ),
+    ]
     return {
         "generatedBy": f"ProLIF {prolif.__version__}",
         "pythonRdkitVersion": rdkit.__version__,
         "rules": sorted({case["rule"] for case in cases}),
         "cases": cases,
+        "smartsCases": smarts_cases,
     }
 
 
