@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from itertools import starmap
 from pathlib import Path
 from typing import Any
 
@@ -437,7 +438,7 @@ def generate() -> dict[str, Any]:
             fixtures["metal_false"],
         ),
     ]
-    cases = [make_case(*definition) for definition in definitions]
+    cases = list(starmap(make_case, definitions))
 
     hydrophobic = Hydrophobic()
     explicit_hbond = HBAcceptor()
