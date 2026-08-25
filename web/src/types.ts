@@ -17,10 +17,17 @@ export interface AtomRecord {
 /** Ordered atom indices returned by one SMARTS substructure match. */
 export type AtomMatch = readonly number[];
 
+/** Hybridization states used by ProLIF's implicit-hydrogen geometry checks. */
+export type AtomHybridization = "SP" | "SP2" | "SP3" | "OTHER";
+
 /** Minimum interface required from a chemistry backend such as RDKit.js. */
 export interface ChemicalComponent {
   readonly atoms: readonly AtomRecord[];
   findMatches(smarts: string): readonly AtomMatch[];
+  /** Atom indices directly bonded to `atomIndex`. */
+  neighbors(atomIndex: number): readonly number[];
+  /** RDKit hybridization for one atom. */
+  hybridization(atomIndex: number): AtomHybridization;
 }
 
 export interface InteractionAtomIndices {
@@ -31,15 +38,18 @@ export interface InteractionAtomIndices {
 /**
  * Browser equivalent of ProLIF's interaction metadata.
  *
- * Rule-specific scalar geometry is retained under `geometry` while the common
- * distance remains directly accessible for sorting and display.
+ * Rule-specific geometry is retained under `geometry` while the common
+ * distance remains directly accessible for sorting and display. Implicit
+ * hydrogen-bond rules also report the complete set of heavy-neighbor angles.
  */
+export type InteractionGeometryValue = number | readonly number[];
+
 export interface InteractionMetadata {
   readonly interaction: string;
   readonly indices: InteractionAtomIndices;
   readonly parentIndices: InteractionAtomIndices;
   readonly distance: number;
-  readonly geometry?: Readonly<Record<string, number>>;
+  readonly geometry?: Readonly<Record<string, InteractionGeometryValue>>;
 }
 
 export interface InteractionRule {

@@ -11,6 +11,8 @@ import {
   HBAcceptor,
   HBDonor,
   Hydrophobic,
+  ImplicitHBAcceptor,
+  ImplicitHBDonor,
   MetalAcceptor,
   MetalDonor,
   PiCation,
@@ -47,6 +49,8 @@ const RULES: Readonly<Record<string, () => InteractionRule>> = {
   Hydrophobic: () => new Hydrophobic(),
   HBAcceptor: () => new HBAcceptor(),
   HBDonor: () => new HBDonor(),
+  ImplicitHBAcceptor: () => new ImplicitHBAcceptor(),
+  ImplicitHBDonor: () => new ImplicitHBDonor(),
   XBAcceptor: () => new XBAcceptor(),
   XBDonor: () => new XBDonor(),
   Cationic: () => new Cationic(),
@@ -118,7 +122,27 @@ describe(`browser parity with ${fixture.generatedBy}`, () => {
             Object.keys(expected?.geometry ?? {}).sort(),
           );
           for (const [key, value] of Object.entries(interaction.geometry ?? {})) {
-            expect(value).toBeCloseTo(expected?.geometry?.[key] ?? NaN, 5);
+            const expectedValue = expected?.geometry?.[key];
+            if (Array.isArray(value)) {
+              expect(Array.isArray(expectedValue)).toBe(true);
+              expect(value).toHaveLength(
+                Array.isArray(expectedValue) ? expectedValue.length : 0,
+              );
+              value.forEach((item, itemIndex) => {
+                expect(item).toBeCloseTo(
+                  Array.isArray(expectedValue)
+                    ? (expectedValue[itemIndex] ?? NaN)
+                    : NaN,
+                  5,
+                );
+              });
+            } else {
+              expect(typeof expectedValue).toBe("number");
+              expect(value).toBeCloseTo(
+                typeof expectedValue === "number" ? expectedValue : NaN,
+                5,
+              );
+            }
           }
         });
       } finally {

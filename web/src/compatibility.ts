@@ -6,6 +6,8 @@ export const PROLIF_COMPATIBILITY = {
     Hydrophobic: "implemented",
     HBAcceptor: "implemented",
     HBDonor: "implemented",
+    ImplicitHBAcceptor: "implemented",
+    ImplicitHBDonor: "implemented",
     XBAcceptor: "implemented",
     XBDonor: "implemented",
     Cationic: "implemented",

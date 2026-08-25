@@ -1,6 +1,7 @@
 import type { JSMol, RDKitModule } from "@rdkit/rdkit";
 
 import type {
+  AtomHybridization,
   AtomMatch,
   AtomRecord,
   ChemicalComponent,
@@ -67,6 +68,8 @@ function parseMatches(
 export class RdkitChemicalComponent implements ChemicalComponent {
   readonly atoms: readonly AtomRecord[];
   private readonly matchCache = new Map<string, readonly AtomMatch[]>();
+  private neighborCache: readonly (readonly number[])[] | undefined;
+  private hybridizationCache: readonly AtomHybridization[] | undefined;
   private disposed = false;
 
   constructor(
@@ -111,6 +114,54 @@ export class RdkitChemicalComponent implements ChemicalComponent {
     }
   }
 
+  neighbors(atomIndex: number): readonly number[] {
+    this.assertAtomIndex(atomIndex);
+    if (this.neighborCache === undefined) {
+      const adjacency = Array.from(
+        { length: this.atoms.length },
+        () => [] as number[],
+      );
+      for (const match of this.findMatches("[*]~[*]")) {
+        const first = match[0];
+        const second = match[1];
+        if (first === undefined || second === undefined) {
+          throw new RangeError("RDKit bond query returned an incomplete match");
+        }
+        adjacency[first]?.push(second);
+        adjacency[second]?.push(first);
+      }
+      this.neighborCache = adjacency.map((indices) => [...indices]);
+    }
+    return this.neighborCache[atomIndex] ?? [];
+  }
+
+  hybridization(atomIndex: number): AtomHybridization {
+    this.assertAtomIndex(atomIndex);
+    if (this.hybridizationCache === undefined) {
+      const values = Array.from<AtomHybridization>({ length: this.atoms.length }).fill(
+        "OTHER",
+      );
+      for (const [smarts, hybridization] of [
+        ["[*^1]", "SP"],
+        ["[*^2]", "SP2"],
+        ["[*^3]", "SP3"],
+      ] as const) {
+        for (const match of this.findMatches(smarts)) {
+          const index = match[0];
+          if (index !== undefined) values[index] = hybridization;
+        }
+      }
+      this.hybridizationCache = values;
+    }
+    return this.hybridizationCache[atomIndex] ?? "OTHER";
+  }
+
+  private assertAtomIndex(atomIndex: number): void {
+    if (!Number.isInteger(atomIndex) || atomIndex < 0 || atomIndex >= this.atoms.length) {
+      throw new RangeError(`Invalid atom index ${atomIndex}`);
+    }
+  }
+
   /** Release an owned WebAssembly molecule. Safe to call more than once. */
   dispose(): void {
     if (!this.disposed && this.ownsMolecule) {
@@ -118,6 +169,8 @@ export class RdkitChemicalComponent implements ChemicalComponent {
     }
     this.disposed = true;
     this.matchCache.clear();
+    this.neighborCache = undefined;
+    this.hybridizationCache = undefined;
   }
 }
 

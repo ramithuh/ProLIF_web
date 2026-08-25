@@ -27,6 +27,8 @@ from prolif.interactions import (
     HBAcceptor,
     HBDonor,
     Hydrophobic,
+    ImplicitHBAcceptor,
+    ImplicitHBDonor,
     MetalAcceptor,
     MetalDonor,
     PiCation,
@@ -37,7 +39,7 @@ from prolif.interactions import (
 )
 from prolif.interactions.base import Interaction
 from prolif.interactions.utils import get_mapindex
-from prolif.molecule import Molecule
+from prolif.molecule import Molecule, sdf_supplier
 from prolif.residue import Residue
 
 
@@ -86,11 +88,16 @@ def normalize_metadata(
     metadata: dict[str, Any],
 ) -> dict[str, Any]:
     common = {"indices", "parent_indices", "distance"}
-    geometry = {
-        key: float(value)
-        for key, value in metadata.items()
-        if key not in common and isinstance(value, (int, float, np.number))
-    }
+    geometry: dict[str, float | list[float]] = {}
+    for key, value in metadata.items():
+        if key in common:
+            continue
+        if isinstance(value, (int, float, np.number)):
+            geometry[key] = float(value)
+        elif isinstance(value, (list, tuple, np.ndarray)) and all(
+            isinstance(item, (int, float, np.number)) for item in value
+        ):
+            geometry[key] = [float(item) for item in value]
     normalized: dict[str, Any] = {
         "interaction": interaction_name,
         "indices": {
@@ -153,6 +160,18 @@ def generate() -> dict[str, Any]:
         }.items()
     }
 
+    implicit_path = datapath / "implicitHbond"
+    implicit_ligand = sdf_supplier(str(implicit_path / "1.D.sdf"))[0][0]
+    implicit_protein_rdkit = Chem.MolFromPDBFile(
+        str(implicit_path / "receptor.pdb"),
+        removeHs=True,
+    )
+    if implicit_protein_rdkit is None:
+        raise RuntimeError("RDKit could not parse the implicit-H receptor fixture")
+    implicit_protein = Molecule.from_rdkit(implicit_protein_rdkit)
+    implicit_tyr = implicit_protein["TYR167.B"]
+    implicit_asp = implicit_protein["ASP95.A"]
+
     definitions: list[tuple[str, str, Interaction, Residue, Residue]] = [
         ("hydrophobic-edge", "Hydrophobic", Hydrophobic(), fixtures["benzene"], fixtures["edge"]),
         ("hydrophobic-negative", "Hydrophobic", Hydrophobic(), fixtures["benzene"], fixtures["chlorine"]),
@@ -162,6 +181,9 @@ def generate() -> dict[str, Any]:
         ("hbond-acceptor-negative", "HBAcceptor", HBAcceptor(), fixtures["acceptor_false"], fixtures["donor"]),
         ("hbond-donor", "HBDonor", HBDonor(), fixtures["donor"], fixtures["acceptor"]),
         ("hbond-donor-negative", "HBDonor", HBDonor(), fixtures["donor"], fixtures["acceptor_false"]),
+        ("implicit-hbond-acceptor-tyr", "ImplicitHBAcceptor", ImplicitHBAcceptor(), implicit_tyr, implicit_ligand),
+        ("implicit-hbond-acceptor-asp", "ImplicitHBAcceptor", ImplicitHBAcceptor(), implicit_asp, implicit_ligand),
+        ("implicit-hbond-donor", "ImplicitHBDonor", ImplicitHBDonor(), implicit_ligand, implicit_tyr),
         ("halogen-acceptor", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor"], fixtures["xb_donor"]),
         ("halogen-acceptor-xar-negative", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor_false_xar"], fixtures["xb_donor"]),
         ("halogen-acceptor-axd-negative", "XBAcceptor", XBAcceptor(), fixtures["xb_acceptor_false_axd"], fixtures["xb_donor"]),

@@ -2,6 +2,7 @@ import type {
   AtomMatch,
   AtomRecord,
   ChemicalComponent,
+  InteractionGeometryValue,
   InteractionMetadata,
 } from "../types.js";
 
@@ -32,7 +33,7 @@ export function interactionMetadata(
   ligandMatch: AtomMatch,
   proteinMatch: AtomMatch,
   distance: number,
-  geometry?: Readonly<Record<string, number>>,
+  geometry?: Readonly<Record<string, InteractionGeometryValue>>,
 ): InteractionMetadata {
   const common = {
     interaction: name,

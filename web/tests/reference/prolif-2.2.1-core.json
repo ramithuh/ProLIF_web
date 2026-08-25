@@ -8,6 +8,8 @@
     "HBAcceptor",
     "HBDonor",
     "Hydrophobic",
+    "ImplicitHBAcceptor",
+    "ImplicitHBDonor",
     "MetalAcceptor",
     "MetalDonor",
     "PiCation",
@@ -1470,6 +1472,1038 @@
         ]
       },
       "expected": []
+    },
+    {
+      "name": "implicit-hbond-acceptor-tyr",
+      "rule": "ImplicitHBAcceptor",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 13 13  0  0  0  0  0  0  0  0999 V2000\n    5.9240  -10.3180  -26.7950 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8280  -10.0170  -27.7090 C   0  0  2  0  0  0  0  0  0  0  0  0\n    3.9320   -8.8820  -27.2120 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1890   -8.3770  -26.0990 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9940  -11.2820  -27.9330 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6200  -12.0180  -26.6600 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7060  -11.4770  -25.7550 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1780  -13.2620  -26.3630 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3540  -12.1590  -24.5890 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8350  -13.9510  -25.2000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9220  -13.3950  -24.3200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5740  -14.0780  -23.1760 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9870   -8.5120  -27.9420 O   0  0  0  0  0  0  0  0  0  0  0  0\n  2  1  1  1\n  3  2  1  0\n  4  3  2  0\n  5  2  1  0\n  6  5  1  0\n  7  6  1  0\n  8  6  2  0\n  9  7  2  0\n 10  8  1  0\n 11 10  2  0\n 11  9  1  0\n 12 11  1  0\n 13  3  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 2505,
+            "atomicNumber": 7,
+            "position": [
+              5.924,
+              -10.318,
+              -26.795
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 2506,
+            "atomicNumber": 6,
+            "position": [
+              4.828,
+              -10.017,
+              -27.709
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2507,
+            "atomicNumber": 6,
+            "position": [
+              3.932,
+              -8.882,
+              -27.212
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 2508,
+            "atomicNumber": 8,
+            "position": [
+              4.189,
+              -8.377,
+              -26.099
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 2509,
+            "atomicNumber": 6,
+            "position": [
+              3.994,
+              -11.282,
+              -27.933
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 2510,
+            "atomicNumber": 6,
+            "position": [
+              3.62,
+              -12.018,
+              -26.66
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 2511,
+            "atomicNumber": 6,
+            "position": [
+              2.706,
+              -11.477,
+              -25.755
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 2512,
+            "atomicNumber": 6,
+            "position": [
+              4.178,
+              -13.262,
+              -26.363
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 2513,
+            "atomicNumber": 6,
+            "position": [
+              2.354,
+              -12.159,
+              -24.589
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 2514,
+            "atomicNumber": 6,
+            "position": [
+              3.835,
+              -13.951,
+              -25.2
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 2515,
+            "atomicNumber": 6,
+            "position": [
+              2.922,
+              -13.395,
+              -24.32
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 2516,
+            "atomicNumber": 8,
+            "position": [
+              2.574,
+              -14.078,
+              -23.176
+            ]
+          },
+          {
+            "index": 12,
+            "parentIndex": 2517,
+            "atomicNumber": 8,
+            "position": [
+              2.987,
+              -8.512,
+              -27.942
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 18 20  0  0  0  0  0  0  0  0999 V2000\n   -1.3760  -10.2730  -22.0380 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.0280   -9.0170  -22.2620 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3380   -8.2530  -20.9460 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.1470   -7.9570  -20.1840 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7210   -6.6180  -20.5300 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.3710   -6.6620  -21.8290 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7880   -5.6430  -22.6800 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3970   -4.3240  -22.6470 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9940   -3.5860  -23.6340 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8870   -4.0470  -24.5790 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2550   -5.4100  -24.5670 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1020   -5.9490  -25.4310 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6980   -6.2480  -23.5900 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8980   -7.6110  -23.3680 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1210   -7.7990  -22.3520 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9450   -5.8760  -21.0320 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0060   -6.9150  -21.3020 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -4.1460   -6.6070  -20.4800 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  2  1  6\n  3  4  1  0\n  4  5  1  0\n  5  6  1  6\n  6  7  1  0\n  7  8  1  0\n  8  9  2  0\n  9 10  1  0\n 10 11  2  0\n 11 12  1  0\n  7 13  2  0\n 11 13  1  0\n 13 14  1  0\n  6 15  1  0\n 14 15  2  0\n  5 16  1  0\n  3 17  1  0\n 16 17  1  0\n 17 18  1  1\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 8,
+            "position": [
+              -1.376,
+              -10.273,
+              -22.038
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              -2.028,
+              -9.017,
+              -22.262
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -2.338,
+              -8.253,
+              -20.946
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 8,
+            "position": [
+              -1.147,
+              -7.957,
+              -20.184
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.721,
+              -6.618,
+              -20.53
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 7,
+            "position": [
+              0.371,
+              -6.662,
+              -21.829
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 6,
+            "position": [
+              0.788,
+              -5.643,
+              -22.68
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 7,
+            "position": [
+              0.397,
+              -4.324,
+              -22.647
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 6,
+            "position": [
+              0.994,
+              -3.586,
+              -23.634
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 7,
+            "position": [
+              1.887,
+              -4.047,
+              -24.579
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 6,
+            "position": [
+              2.255,
+              -5.41,
+              -24.567
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 7,
+            "position": [
+              3.102,
+              -5.949,
+              -25.431
+            ]
+          },
+          {
+            "index": 12,
+            "parentIndex": 12,
+            "atomicNumber": 6,
+            "position": [
+              1.698,
+              -6.248,
+              -23.59
+            ]
+          },
+          {
+            "index": 13,
+            "parentIndex": 13,
+            "atomicNumber": 7,
+            "position": [
+              1.898,
+              -7.611,
+              -23.368
+            ]
+          },
+          {
+            "index": 14,
+            "parentIndex": 14,
+            "atomicNumber": 6,
+            "position": [
+              1.121,
+              -7.799,
+              -22.352
+            ]
+          },
+          {
+            "index": 15,
+            "parentIndex": 15,
+            "atomicNumber": 6,
+            "position": [
+              -1.945,
+              -5.876,
+              -21.032
+            ]
+          },
+          {
+            "index": 16,
+            "parentIndex": 16,
+            "atomicNumber": 6,
+            "position": [
+              -3.006,
+              -6.915,
+              -21.302
+            ]
+          },
+          {
+            "index": 17,
+            "parentIndex": 17,
+            "atomicNumber": 8,
+            "position": [
+              -4.146,
+              -6.607,
+              -20.48
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "ImplicitHBAcceptor",
+          "indices": {
+            "ligand": [
+              3
+            ],
+            "protein": [
+              11
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              2508
+            ],
+            "protein": [
+              11
+            ]
+          },
+          "distance": 2.7428045865500525,
+          "geometry": {
+            "ideal_acceptor_angle": 120.0,
+            "acceptor_atom_angles": [
+              119.56582217170318
+            ],
+            "acceptor_atom_angle_deviation": 0.43417782829682494,
+            "acceptor_plane_angle": 14.191233519808888,
+            "ideal_donor_angle": 120.0,
+            "donor_atom_angles": [
+              140.58040843212183
+            ],
+            "donor_atom_angle_deviation": 20.58040843212183,
+            "donor_plane_angle": 1.9892680854814626,
+            "vina_hbond_potential": 0.9921165792423713
+          }
+        }
+      ]
+    },
+    {
+      "name": "implicit-hbond-acceptor-asp",
+      "rule": "ImplicitHBAcceptor",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n  8  7  0  0  0  0  0  0  0  0999 V2000\n   -4.0450  -16.4280  -21.0130 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1370  -15.2920  -21.0650 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -2.6400  -14.9830  -19.6530 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.3730  -14.4210  -18.8320 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.8670  -14.0740  -21.6180 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.9710  -12.8620  -21.7290 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.4940  -11.7330  -21.6430 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.7490  -13.0390  -21.9130 O   0  0  0  0  0  0  0  0  0  0  0  0\n  2  1  1  1\n  3  2  1  0\n  4  3  2  0\n  5  2  1  0\n  6  5  1  0\n  7  6  2  0\n  8  6  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 685,
+            "atomicNumber": 7,
+            "position": [
+              -4.045,
+              -16.428,
+              -21.013
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 686,
+            "atomicNumber": 6,
+            "position": [
+              -3.137,
+              -15.292,
+              -21.065
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 687,
+            "atomicNumber": 6,
+            "position": [
+              -2.64,
+              -14.983,
+              -19.653
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 688,
+            "atomicNumber": 8,
+            "position": [
+              -3.373,
+              -14.421,
+              -18.832
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 689,
+            "atomicNumber": 6,
+            "position": [
+              -3.867,
+              -14.074,
+              -21.618
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 690,
+            "atomicNumber": 6,
+            "position": [
+              -2.971,
+              -12.862,
+              -21.729
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 691,
+            "atomicNumber": 8,
+            "position": [
+              -3.494,
+              -11.733,
+              -21.643
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 692,
+            "atomicNumber": 8,
+            "position": [
+              -1.749,
+              -13.039,
+              -21.913
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 18 20  0  0  0  0  0  0  0  0999 V2000\n   -1.3760  -10.2730  -22.0380 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.0280   -9.0170  -22.2620 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3380   -8.2530  -20.9460 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.1470   -7.9570  -20.1840 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7210   -6.6180  -20.5300 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.3710   -6.6620  -21.8290 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7880   -5.6430  -22.6800 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3970   -4.3240  -22.6470 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9940   -3.5860  -23.6340 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8870   -4.0470  -24.5790 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2550   -5.4100  -24.5670 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1020   -5.9490  -25.4310 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6980   -6.2480  -23.5900 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8980   -7.6110  -23.3680 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1210   -7.7990  -22.3520 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9450   -5.8760  -21.0320 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0060   -6.9150  -21.3020 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -4.1460   -6.6070  -20.4800 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  2  1  6\n  3  4  1  0\n  4  5  1  0\n  5  6  1  6\n  6  7  1  0\n  7  8  1  0\n  8  9  2  0\n  9 10  1  0\n 10 11  2  0\n 11 12  1  0\n  7 13  2  0\n 11 13  1  0\n 13 14  1  0\n  6 15  1  0\n 14 15  2  0\n  5 16  1  0\n  3 17  1  0\n 16 17  1  0\n 17 18  1  1\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 8,
+            "position": [
+              -1.376,
+              -10.273,
+              -22.038
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              -2.028,
+              -9.017,
+              -22.262
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -2.338,
+              -8.253,
+              -20.946
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 8,
+            "position": [
+              -1.147,
+              -7.957,
+              -20.184
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.721,
+              -6.618,
+              -20.53
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 7,
+            "position": [
+              0.371,
+              -6.662,
+              -21.829
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 6,
+            "position": [
+              0.788,
+              -5.643,
+              -22.68
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 7,
+            "position": [
+              0.397,
+              -4.324,
+              -22.647
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 6,
+            "position": [
+              0.994,
+              -3.586,
+              -23.634
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 7,
+            "position": [
+              1.887,
+              -4.047,
+              -24.579
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 6,
+            "position": [
+              2.255,
+              -5.41,
+              -24.567
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 7,
+            "position": [
+              3.102,
+              -5.949,
+              -25.431
+            ]
+          },
+          {
+            "index": 12,
+            "parentIndex": 12,
+            "atomicNumber": 6,
+            "position": [
+              1.698,
+              -6.248,
+              -23.59
+            ]
+          },
+          {
+            "index": 13,
+            "parentIndex": 13,
+            "atomicNumber": 7,
+            "position": [
+              1.898,
+              -7.611,
+              -23.368
+            ]
+          },
+          {
+            "index": 14,
+            "parentIndex": 14,
+            "atomicNumber": 6,
+            "position": [
+              1.121,
+              -7.799,
+              -22.352
+            ]
+          },
+          {
+            "index": 15,
+            "parentIndex": 15,
+            "atomicNumber": 6,
+            "position": [
+              -1.945,
+              -5.876,
+              -21.032
+            ]
+          },
+          {
+            "index": 16,
+            "parentIndex": 16,
+            "atomicNumber": 6,
+            "position": [
+              -3.006,
+              -6.915,
+              -21.302
+            ]
+          },
+          {
+            "index": 17,
+            "parentIndex": 17,
+            "atomicNumber": 8,
+            "position": [
+              -4.146,
+              -6.607,
+              -20.48
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "ImplicitHBAcceptor",
+          "indices": {
+            "ligand": [
+              6
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              691
+            ],
+            "protein": [
+              0
+            ]
+          },
+          "distance": 2.60260427264692,
+          "geometry": {
+            "ideal_acceptor_angle": 120.0,
+            "acceptor_atom_angles": [
+              98.97972105817969
+            ],
+            "acceptor_atom_angle_deviation": 21.020278941820308,
+            "acceptor_plane_angle": 2.5383498575257653,
+            "ideal_donor_angle": 109.5,
+            "donor_atom_angles": [
+              98.34675990410959
+            ],
+            "donor_atom_angle_deviation": 11.15324009589041,
+            "vina_hbond_potential": 0.9721168963162423
+          }
+        }
+      ]
+    },
+    {
+      "name": "implicit-hbond-donor",
+      "rule": "ImplicitHBDonor",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 18 20  0  0  0  0  0  0  0  0999 V2000\n   -1.3760  -10.2730  -22.0380 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.0280   -9.0170  -22.2620 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3380   -8.2530  -20.9460 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.1470   -7.9570  -20.1840 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7210   -6.6180  -20.5300 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.3710   -6.6620  -21.8290 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7880   -5.6430  -22.6800 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3970   -4.3240  -22.6470 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9940   -3.5860  -23.6340 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8870   -4.0470  -24.5790 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2550   -5.4100  -24.5670 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1020   -5.9490  -25.4310 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6980   -6.2480  -23.5900 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8980   -7.6110  -23.3680 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1210   -7.7990  -22.3520 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9450   -5.8760  -21.0320 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0060   -6.9150  -21.3020 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -4.1460   -6.6070  -20.4800 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  2  1  6\n  3  4  1  0\n  4  5  1  0\n  5  6  1  6\n  6  7  1  0\n  7  8  1  0\n  8  9  2  0\n  9 10  1  0\n 10 11  2  0\n 11 12  1  0\n  7 13  2  0\n 11 13  1  0\n 13 14  1  0\n  6 15  1  0\n 14 15  2  0\n  5 16  1  0\n  3 17  1  0\n 16 17  1  0\n 17 18  1  1\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 8,
+            "position": [
+              -1.376,
+              -10.273,
+              -22.038
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              -2.028,
+              -9.017,
+              -22.262
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              -2.338,
+              -8.253,
+              -20.946
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 8,
+            "position": [
+              -1.147,
+              -7.957,
+              -20.184
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              -0.721,
+              -6.618,
+              -20.53
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 7,
+            "position": [
+              0.371,
+              -6.662,
+              -21.829
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 6,
+            "position": [
+              0.788,
+              -5.643,
+              -22.68
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 7,
+            "position": [
+              0.397,
+              -4.324,
+              -22.647
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 6,
+            "position": [
+              0.994,
+              -3.586,
+              -23.634
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 7,
+            "position": [
+              1.887,
+              -4.047,
+              -24.579
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 6,
+            "position": [
+              2.255,
+              -5.41,
+              -24.567
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 7,
+            "position": [
+              3.102,
+              -5.949,
+              -25.431
+            ]
+          },
+          {
+            "index": 12,
+            "parentIndex": 12,
+            "atomicNumber": 6,
+            "position": [
+              1.698,
+              -6.248,
+              -23.59
+            ]
+          },
+          {
+            "index": 13,
+            "parentIndex": 13,
+            "atomicNumber": 7,
+            "position": [
+              1.898,
+              -7.611,
+              -23.368
+            ]
+          },
+          {
+            "index": 14,
+            "parentIndex": 14,
+            "atomicNumber": 6,
+            "position": [
+              1.121,
+              -7.799,
+              -22.352
+            ]
+          },
+          {
+            "index": 15,
+            "parentIndex": 15,
+            "atomicNumber": 6,
+            "position": [
+              -1.945,
+              -5.876,
+              -21.032
+            ]
+          },
+          {
+            "index": 16,
+            "parentIndex": 16,
+            "atomicNumber": 6,
+            "position": [
+              -3.006,
+              -6.915,
+              -21.302
+            ]
+          },
+          {
+            "index": 17,
+            "parentIndex": 17,
+            "atomicNumber": 8,
+            "position": [
+              -4.146,
+              -6.607,
+              -20.48
+            ]
+          }
+        ]
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 13 13  0  0  0  0  0  0  0  0999 V2000\n    5.9240  -10.3180  -26.7950 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8280  -10.0170  -27.7090 C   0  0  2  0  0  0  0  0  0  0  0  0\n    3.9320   -8.8820  -27.2120 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1890   -8.3770  -26.0990 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9940  -11.2820  -27.9330 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6200  -12.0180  -26.6600 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7060  -11.4770  -25.7550 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1780  -13.2620  -26.3630 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3540  -12.1590  -24.5890 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8350  -13.9510  -25.2000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9220  -13.3950  -24.3200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5740  -14.0780  -23.1760 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9870   -8.5120  -27.9420 O   0  0  0  0  0  0  0  0  0  0  0  0\n  2  1  1  1\n  3  2  1  0\n  4  3  2  0\n  5  2  1  0\n  6  5  1  0\n  7  6  1  0\n  8  6  2  0\n  9  7  2  0\n 10  8  1  0\n 11 10  2  0\n 11  9  1  0\n 12 11  1  0\n 13  3  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 2505,
+            "atomicNumber": 7,
+            "position": [
+              5.924,
+              -10.318,
+              -26.795
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 2506,
+            "atomicNumber": 6,
+            "position": [
+              4.828,
+              -10.017,
+              -27.709
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2507,
+            "atomicNumber": 6,
+            "position": [
+              3.932,
+              -8.882,
+              -27.212
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 2508,
+            "atomicNumber": 8,
+            "position": [
+              4.189,
+              -8.377,
+              -26.099
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 2509,
+            "atomicNumber": 6,
+            "position": [
+              3.994,
+              -11.282,
+              -27.933
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 2510,
+            "atomicNumber": 6,
+            "position": [
+              3.62,
+              -12.018,
+              -26.66
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 2511,
+            "atomicNumber": 6,
+            "position": [
+              2.706,
+              -11.477,
+              -25.755
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 2512,
+            "atomicNumber": 6,
+            "position": [
+              4.178,
+              -13.262,
+              -26.363
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 2513,
+            "atomicNumber": 6,
+            "position": [
+              2.354,
+              -12.159,
+              -24.589
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 2514,
+            "atomicNumber": 6,
+            "position": [
+              3.835,
+              -13.951,
+              -25.2
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 2515,
+            "atomicNumber": 6,
+            "position": [
+              2.922,
+              -13.395,
+              -24.32
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 2516,
+            "atomicNumber": 8,
+            "position": [
+              2.574,
+              -14.078,
+              -23.176
+            ]
+          },
+          {
+            "index": 12,
+            "parentIndex": 2517,
+            "atomicNumber": 8,
+            "position": [
+              2.987,
+              -8.512,
+              -27.942
+            ]
+          }
+        ]
+      },
+      "expected": [
+        {
+          "interaction": "ImplicitHBDonor",
+          "indices": {
+            "ligand": [
+              11
+            ],
+            "protein": [
+              3
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              11
+            ],
+            "protein": [
+              2508
+            ]
+          },
+          "distance": 2.7428045865500525,
+          "geometry": {
+            "ideal_acceptor_angle": 120.0,
+            "acceptor_atom_angles": [
+              119.56582217170318
+            ],
+            "acceptor_atom_angle_deviation": 0.43417782829682494,
+            "acceptor_plane_angle": 14.191233519808888,
+            "ideal_donor_angle": 120.0,
+            "donor_atom_angles": [
+              140.58040843212183
+            ],
+            "donor_atom_angle_deviation": 20.58040843212183,
+            "donor_plane_angle": 1.9892680854814626,
+            "vina_hbond_potential": 0.9921165792423713
+          }
+        }
+      ]
     },
     {
       "name": "halogen-acceptor",
