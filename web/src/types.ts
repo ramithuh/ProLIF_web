@@ -22,6 +22,8 @@ export type AtomHybridization = "SP" | "SP2" | "SP3" | "OTHER";
 
 /** Minimum interface required from a chemistry backend such as RDKit.js. */
 export interface ChemicalComponent {
+  /** Native residue identity, required for residue-aware rules such as water exclusion. */
+  readonly residueName?: string | undefined;
   readonly atoms: readonly AtomRecord[];
   findMatches(smarts: string): readonly AtomMatch[];
   /** Atom indices directly bonded to `atomIndex`. */

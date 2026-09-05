@@ -77,6 +77,7 @@ export class RdkitChemicalComponent implements ChemicalComponent {
     private readonly molecule: JSMol,
     atoms: readonly AtomRecord[],
     private readonly ownsMolecule = false,
+    readonly residueName?: string,
   ) {
     atoms.forEach((atom, arrayIndex) => {
       if (atom.index !== arrayIndex) {
@@ -121,9 +122,14 @@ export class RdkitChemicalComponent implements ChemicalComponent {
         { length: this.atoms.length },
         () => [] as number[],
       );
-      for (const match of this.findMatches("[*]~[*]")) {
-        const first = match[0];
-        const second = match[1];
+      // GetNeighbors follows bond insertion order, not SMARTS match order.
+      // Preserve that order: implicit H-bond plane construction uses it.
+      const json = JSON.parse(this.molecule.get_json()) as {
+        molecules: { bonds: { atoms: number[] }[] }[];
+      };
+      for (const bond of json.molecules[0]!.bonds) {
+        const first = bond.atoms[0];
+        const second = bond.atoms[1];
         if (first === undefined || second === undefined) {
           throw new RangeError("RDKit bond query returned an incomplete match");
         }
@@ -183,6 +189,7 @@ export function componentFromRdkitInput(
   moleculeInput: string,
   atoms: readonly AtomRecord[],
   details?: Readonly<Record<string, unknown>>,
+  context?: { readonly residueName?: string },
 ): RdkitChemicalComponent {
   // RDKit.js declares the second argument optional, but its Embind boundary
   // rejects an explicitly passed `undefined`. Invoke the one-argument form.
@@ -194,7 +201,7 @@ export function componentFromRdkitInput(
     throw new SyntaxError("RDKit could not parse the supplied molecule");
   }
   try {
-    return new RdkitChemicalComponent(rdkit, molecule, atoms, true);
+    return new RdkitChemicalComponent(rdkit, molecule, atoms, true, context?.residueName);
   } catch (error) {
     molecule.delete();
     throw error;

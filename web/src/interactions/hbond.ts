@@ -73,6 +73,7 @@ interface AtomGeometry {
 }
 
 export interface ImplicitHBAcceptorOptions {
+  readonly includeWater?: boolean;
   readonly acceptor?: string;
   readonly donor?: string;
   readonly distance?: number;
@@ -155,6 +156,7 @@ function atomGeometry(
 
 /** Browser port of ProLIF 2.2.1's heavy-atom implicit H-bond rule. */
 export class ImplicitHBAcceptor implements InteractionRule {
+  readonly includeWater: boolean;
   readonly name = "ImplicitHBAcceptor";
   readonly acceptorSmarts: string;
   readonly donorSmarts: string;
@@ -166,6 +168,7 @@ export class ImplicitHBAcceptor implements InteractionRule {
   readonly ignoreGeometryChecks: boolean;
 
   constructor(options: ImplicitHBAcceptorOptions = {}) {
+    this.includeWater = options.includeWater ?? false;
     this.acceptorSmarts =
       options.acceptor ?? PROLIF_2_2_IMPLICIT_HBOND_ACCEPTOR_SMARTS;
     this.donorSmarts = options.donor ?? PROLIF_2_2_IMPLICIT_HBOND_DONOR_SMARTS;
@@ -183,6 +186,11 @@ export class ImplicitHBAcceptor implements InteractionRule {
     ligand: ChemicalComponent,
     protein: ChemicalComponent,
   ): readonly InteractionMetadata[] {
+    // ProLIF's RESNAME_ALIASES (including H20 with a zero).
+    const waterNames = new Set(["HOH", "H20", "WAT", "SOL", "TIP3", "TP3", "TIP"]);
+    const ligandWater = waterNames.has(ligand.residueName ?? "");
+    const proteinWater = waterNames.has(protein.residueName ?? "");
+    if ((ligandWater || proteinWater) && !this.includeWater) return [];
     const output: InteractionMetadata[] = [];
     for (const ligandMatch of ligand.findMatches(this.acceptorSmarts)) {
       const ligandIndex = ligandMatch[0];
@@ -200,6 +208,7 @@ export class ImplicitHBAcceptor implements InteractionRule {
 
         const geometry: Record<string, InteractionGeometryValue> = {};
         if (!this.ignoreGeometryChecks) {
+          if (!ligandWater) {
           const acceptor = atomGeometry(
             ligand,
             ligandIndex,
@@ -214,7 +223,8 @@ export class ImplicitHBAcceptor implements InteractionRule {
             if (acceptor.planeAngle > 90) continue;
             geometry.acceptor_plane_angle = acceptor.planeAngle;
           }
-
+          }
+          if (!proteinWater) {
           const donor = atomGeometry(
             protein,
             proteinIndex,
@@ -228,6 +238,7 @@ export class ImplicitHBAcceptor implements InteractionRule {
           if (donor.planeAngle !== undefined) {
             if (donor.planeAngle > this.toleranceDeviationDonorPlaneAngle) continue;
             geometry.donor_plane_angle = donor.planeAngle;
+          }
           }
         }
 

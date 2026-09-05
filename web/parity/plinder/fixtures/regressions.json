@@ -1,0 +1,836 @@
+{
+  "source": "seeded local Plinder audit 2026-09-04",
+  "cases": [
+    {
+      "pdb": "7gmz",
+      "rule": "ImplicitHBAcceptor",
+      "kind": "failures",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 26 30  0  0  0  0  0  0  0  0999 V2000\n   12.7060   -9.8560    6.5180 N   0  0  0  0  0  0  0  0  0  0  0  0\n   14.4340  -11.2510    5.5410 C   0  0  0  0  0  0  0  0  0  0  0  0\n   16.0640  -11.1380    3.6950 C   0  0  0  0  0  0  0  0  0  0  0  0\n   16.8770  -12.0270    2.7370 C   0  0  1  0  0  0  0  0  0  0  0  0\n   16.6500  -13.5630    2.5810 C   0  0  0  0  0  0  0  0  0  0  0  0\n   18.1500  -13.6770    2.2590 C   0  0  1  0  0  0  0  0  0  0  0  0\n   16.8960  -11.6000    1.2650 C   0  0  0  0  0  0  0  0  0  0  0  0\n   17.0580  -10.9480   -1.4400 C   0  0  0  0  0  0  0  0  0  0  0  0\n   17.6450  -12.3680    0.3890 C   0  0  0  0  0  0  0  0  0  0  0  0\n   13.1110  -10.2160    7.7260 C   0  0  0  0  0  0  0  0  0  0  0  0\n   15.5020   -8.7520   -1.1540 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   16.3140  -10.1780   -0.5640 C   0  0  0  0  0  0  0  0  0  0  0  0\n   16.2110  -10.4940    0.7750 C   0  0  0  0  0  0  0  0  0  0  0  0\n   17.7300  -12.0610   -0.9620 C   0  0  0  0  0  0  0  0  0  0  0  0\n   18.3310  -13.4740    0.8340 O   0  0  0  0  0  0  0  0  0  0  0  0\n   18.3830  -12.3450    2.9920 C   0  0  0  0  0  0  0  0  0  0  0  0\n   16.4180   -9.9950    3.9370 O   0  0  0  0  0  0  0  0  0  0  0  0\n   15.1190  -11.7680    4.4190 N   0  0  0  0  0  0  0  0  0  0  0  0\n   13.3550  -10.3730    5.4650 C   0  0  0  0  0  0  0  0  0  0  0  0\n   14.1960  -11.0920    7.9730 C   0  0  0  0  0  0  0  0  0  0  0  0\n   14.6280  -11.4310    9.2780 C   0  0  0  0  0  0  0  0  0  0  0  0\n   15.6890  -12.2620    9.4130 C   0  0  0  0  0  0  0  0  0  0  0  0\n   16.0940  -12.5890   10.6710 F   0  0  0  0  0  0  0  0  0  0  0  0\n   14.8830  -11.6270    6.8460 C   0  0  0  0  0  0  0  0  0  0  0  0\n   15.9820  -12.4930    7.0810 C   0  0  0  0  0  0  0  0  0  0  0  0\n   16.3750  -12.8010    8.3500 C   0  0  0  0  0  0  0  0  0  0  0  0\n  4  3  1  1\n  4  5  1  0\n  6  5  1  0\n  4  7  1  0\n  7  9  2  0\n  1 10  1  0\n  8 12  1  0\n 11 12  1  0\n  7 13  1  0\n 12 13  2  0\n  8 14  2  0\n  9 14  1  0\n  6 15  1  0\n  9 15  1  0\n  4 16  1  0\n  6 16  1  1\n  3 17  2  0\n  2 18  1  0\n  3 18  1  0\n  1 19  2  0\n  2 19  1  0\n 10 20  2  0\n 20 21  1  0\n 21 22  2  0\n 22 23  1  0\n  2 24  2  0\n 20 24  1  0\n 24 25  1  0\n 22 26  1  0\n 25 26  2  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 7,
+            "position": [
+              12.706,
+              -9.856,
+              6.518
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              14.434,
+              -11.251,
+              5.541
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              16.064,
+              -11.138,
+              3.695
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 6,
+            "position": [
+              16.877,
+              -12.027,
+              2.737
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              16.65,
+              -13.563,
+              2.581
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              18.15,
+              -13.677,
+              2.259
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 6,
+            "position": [
+              16.896,
+              -11.6,
+              1.265
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 6,
+            "position": [
+              17.058,
+              -10.948,
+              -1.44
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 6,
+            "position": [
+              17.645,
+              -12.368,
+              0.389
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 6,
+            "position": [
+              13.111,
+              -10.216,
+              7.726
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 17,
+            "position": [
+              15.502,
+              -8.752,
+              -1.154
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 6,
+            "position": [
+              16.314,
+              -10.178,
+              -0.564
+            ]
+          },
+          {
+            "index": 12,
+            "parentIndex": 12,
+            "atomicNumber": 6,
+            "position": [
+              16.211,
+              -10.494,
+              0.775
+            ]
+          },
+          {
+            "index": 13,
+            "parentIndex": 13,
+            "atomicNumber": 6,
+            "position": [
+              17.73,
+              -12.061,
+              -0.962
+            ]
+          },
+          {
+            "index": 14,
+            "parentIndex": 14,
+            "atomicNumber": 8,
+            "position": [
+              18.331,
+              -13.474,
+              0.834
+            ]
+          },
+          {
+            "index": 15,
+            "parentIndex": 15,
+            "atomicNumber": 6,
+            "position": [
+              18.383,
+              -12.345,
+              2.992
+            ]
+          },
+          {
+            "index": 16,
+            "parentIndex": 16,
+            "atomicNumber": 8,
+            "position": [
+              16.418,
+              -9.995,
+              3.937
+            ]
+          },
+          {
+            "index": 17,
+            "parentIndex": 17,
+            "atomicNumber": 7,
+            "position": [
+              15.119,
+              -11.768,
+              4.419
+            ]
+          },
+          {
+            "index": 18,
+            "parentIndex": 18,
+            "atomicNumber": 6,
+            "position": [
+              13.355,
+              -10.373,
+              5.465
+            ]
+          },
+          {
+            "index": 19,
+            "parentIndex": 19,
+            "atomicNumber": 6,
+            "position": [
+              14.196,
+              -11.092,
+              7.973
+            ]
+          },
+          {
+            "index": 20,
+            "parentIndex": 20,
+            "atomicNumber": 6,
+            "position": [
+              14.628,
+              -11.431,
+              9.278
+            ]
+          },
+          {
+            "index": 21,
+            "parentIndex": 21,
+            "atomicNumber": 6,
+            "position": [
+              15.689,
+              -12.262,
+              9.413
+            ]
+          },
+          {
+            "index": 22,
+            "parentIndex": 22,
+            "atomicNumber": 9,
+            "position": [
+              16.094,
+              -12.589,
+              10.671
+            ]
+          },
+          {
+            "index": 23,
+            "parentIndex": 23,
+            "atomicNumber": 6,
+            "position": [
+              14.883,
+              -11.627,
+              6.846
+            ]
+          },
+          {
+            "index": 24,
+            "parentIndex": 24,
+            "atomicNumber": 6,
+            "position": [
+              15.982,
+              -12.493,
+              7.081
+            ]
+          },
+          {
+            "index": 25,
+            "parentIndex": 25,
+            "atomicNumber": 6,
+            "position": [
+              16.375,
+              -12.801,
+              8.35
+            ]
+          }
+        ],
+        "residue": "UNL1",
+        "graphSha256": "5c5ca87a67595c8627261f5ed9bae87376d2682bcdd70d91ec0d3fe801261017"
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 10 10  0  0  0  0  0  0  0  0999 V2000\n    6.7620   -6.6130    1.4940 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0300   -6.8080    2.1840 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.0420   -7.6170    1.3680 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6800   -8.6850    0.8830 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7940   -7.5050    3.5310 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0550   -7.6410    4.3240 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7890   -6.5290    4.6960 N   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7040   -8.7490    4.7370 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.8400   -6.9910    5.3480 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.8280   -8.3200    5.4110 N   0  0  0  0  0  0  0  0  0  0  0  0\n  2  1  1  6\n  3  2  1  0\n  4  3  2  0\n  5  2  1  0\n  6  5  1  0\n  7  6  1  0\n  8  6  2  0\n  9  7  2  0\n 10  9  1  0\n 10  8  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 3556,
+            "atomicNumber": 7,
+            "position": [
+              6.762,
+              -6.613,
+              1.494
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 3557,
+            "atomicNumber": 6,
+            "position": [
+              8.03,
+              -6.808,
+              2.184
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 3558,
+            "atomicNumber": 6,
+            "position": [
+              9.042,
+              -7.617,
+              1.368
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3559,
+            "atomicNumber": 8,
+            "position": [
+              8.68,
+              -8.685,
+              0.883
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 3560,
+            "atomicNumber": 6,
+            "position": [
+              7.794,
+              -7.505,
+              3.531
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 3561,
+            "atomicNumber": 6,
+            "position": [
+              9.055,
+              -7.641,
+              4.324
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 3562,
+            "atomicNumber": 7,
+            "position": [
+              9.789,
+              -6.529,
+              4.696
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 3563,
+            "atomicNumber": 6,
+            "position": [
+              9.704,
+              -8.749,
+              4.737
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 3564,
+            "atomicNumber": 6,
+            "position": [
+              10.84,
+              -6.991,
+              5.348
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 3565,
+            "atomicNumber": 7,
+            "position": [
+              10.828,
+              -8.32,
+              5.411
+            ]
+          }
+        ],
+        "residue": "HIS163.B",
+        "graphSha256": "306f7499e2127742b26c834d9cdd5818c781cbf04dc29335bc822ea424b46928"
+      },
+      "expected": [
+        {
+          "interaction": "ImplicitHBAcceptor",
+          "indices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              9
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              0
+            ],
+            "protein": [
+              3565
+            ]
+          },
+          "distance": 2.666763769065419,
+          "geometry": {
+            "ideal_acceptor_angle": 120.0,
+            "acceptor_atom_angles": [
+              138.658513368171,
+              103.70874661313532
+            ],
+            "acceptor_atom_angle_deviation": 16.291253386864682,
+            "acceptor_plane_angle": 0.7156366149948161,
+            "ideal_donor_angle": 120.0,
+            "donor_atom_angles": [
+              126.0586647639368,
+              126.70522839351621
+            ],
+            "donor_atom_angle_deviation": 6.058664763936804,
+            "donor_plane_angle": 2.528025419414769,
+            "vina_hbond_potential": 1.0
+          }
+        }
+      ],
+      "versions": {
+        "prolif": "2.2.1",
+        "rdkit": "2025.03.6",
+        "prolifPath": "/home/ruh/miniconda3/envs/xymol/lib/python3.11/site-packages/prolif/__init__.py",
+        "python": "3.11.6 | packaged by conda-forge | (main, Oct  3 2023, 11:57:02) [GCC 12.3.0]"
+      }
+    },
+    {
+      "pdb": "2wyi",
+      "rule": "ImplicitHBDonor",
+      "kind": "failures",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n 12 13  0  0  0  0  0  0  0  0999 V2000\n   41.0550  -50.4570   22.8850 C   0  0  1  0  0  0  0  0  0  0  0  0\n   39.7680  -49.8520   22.8160 O   0  0  0  0  0  0  0  0  0  0  0  0\n   42.1410  -49.4070   22.6570 C   0  0  1  0  0  0  0  0  0  0  0  0\n   43.4800  -50.0240   22.7180 N   0  0  0  0  0  0  0  0  0  0  0  0\n   43.7540  -50.4460   24.1090 C   0  0  0  0  0  0  0  0  0  0  0  0\n   42.7190  -51.4940   24.5640 C   0  0  0  0  0  0  0  0  0  0  0  0\n   41.2640  -51.0730   24.2840 C   0  0  0  0  0  0  0  0  0  0  0  0\n   44.3540  -48.9040   22.3160 C   0  0  0  0  0  0  0  0  0  0  0  0\n   43.5610  -48.1510   21.2140 C   0  0  1  0  0  0  0  0  0  0  0  0\n   44.0880  -48.4570   19.9180 O   0  0  0  0  0  0  0  0  0  0  0  0\n   42.1130  -48.6550   21.3110 C   0  0  1  0  0  0  0  0  0  0  0  0\n   41.7990  -49.5060   20.2010 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  1\n  1  3  1  0\n  3  4  1  6\n  4  5  1  0\n  5  6  1  0\n  1  7  1  0\n  6  7  1  0\n  4  8  1  0\n  8  9  1  0\n  9 10  1  6\n  3 11  1  0\n  9 11  1  0\n 11 12  1  6\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 6,
+            "position": [
+              41.055,
+              -50.457,
+              22.885
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 8,
+            "position": [
+              39.768,
+              -49.852,
+              22.816
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              42.141,
+              -49.407,
+              22.657
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 7,
+            "position": [
+              43.48,
+              -50.024,
+              22.718
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              43.754,
+              -50.446,
+              24.109
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 6,
+            "position": [
+              42.719,
+              -51.494,
+              24.564
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 6,
+            "position": [
+              41.264,
+              -51.073,
+              24.284
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 7,
+            "atomicNumber": 6,
+            "position": [
+              44.354,
+              -48.904,
+              22.316
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 8,
+            "atomicNumber": 6,
+            "position": [
+              43.561,
+              -48.151,
+              21.214
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 9,
+            "atomicNumber": 8,
+            "position": [
+              44.088,
+              -48.457,
+              19.918
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 10,
+            "atomicNumber": 6,
+            "position": [
+              42.113,
+              -48.655,
+              21.311
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 11,
+            "atomicNumber": 8,
+            "position": [
+              41.799,
+              -49.506,
+              20.201
+            ]
+          }
+        ],
+        "residue": "UNL1",
+        "graphSha256": "28e9e22798b5f0f0106ecf2b9c436da1ff4e8ca7e76e15757f7d7a489eb54d20"
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n   34.0900  -52.3180   28.2180 N   0  0  0  0  0  0  0  0  0  0  0  0\n   35.0400  -53.3800   27.9660 C   0  0  2  0  0  0  0  0  0  0  0  0\n   34.8820  -54.5270   28.9740 C   0  0  0  0  0  0  0  0  0  0  0  0\n   35.1480  -55.6820   28.6510 O   0  0  0  0  0  0  0  0  0  0  0  0\n   36.4590  -52.8520   28.0990 C   0  0  0  0  0  0  0  0  0  0  0  0\n   36.8940  -51.7850   27.1280 C   0  0  0  0  0  0  0  0  0  0  0  0\n   37.5270  -52.1260   25.9270 C   0  0  0  0  0  0  0  0  0  0  0  0\n   36.7370  -50.4230   27.4330 C   0  0  0  0  0  0  0  0  0  0  0  0\n   37.9610  -51.1580   25.0590 C   0  0  0  0  0  0  0  0  0  0  0  0\n   37.1760  -49.4410   26.5650 C   0  0  0  0  0  0  0  0  0  0  0  0\n   37.7890  -49.8130   25.3800 C   0  0  0  0  0  0  0  0  0  0  0  0\n   38.2310  -48.8400   24.4980 O   0  0  0  0  0  0  0  0  0  0  0  0\n  2  1  1  1\n  3  2  1  0\n  4  3  2  0\n  5  2  1  0\n  6  5  1  0\n  7  6  1  0\n  8  6  2  0\n  9  7  2  0\n 10  8  1  0\n 11 10  2  0\n 11  9  1  0\n 12 11  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 4554,
+            "atomicNumber": 7,
+            "position": [
+              34.09,
+              -52.318,
+              28.218
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 4555,
+            "atomicNumber": 6,
+            "position": [
+              35.04,
+              -53.38,
+              27.966
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 4556,
+            "atomicNumber": 6,
+            "position": [
+              34.882,
+              -54.527,
+              28.974
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 4557,
+            "atomicNumber": 8,
+            "position": [
+              35.148,
+              -55.682,
+              28.651
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4558,
+            "atomicNumber": 6,
+            "position": [
+              36.459,
+              -52.852,
+              28.099
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 4559,
+            "atomicNumber": 6,
+            "position": [
+              36.894,
+              -51.785,
+              27.128
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 4560,
+            "atomicNumber": 6,
+            "position": [
+              37.527,
+              -52.126,
+              25.927
+            ]
+          },
+          {
+            "index": 7,
+            "parentIndex": 4561,
+            "atomicNumber": 6,
+            "position": [
+              36.737,
+              -50.423,
+              27.433
+            ]
+          },
+          {
+            "index": 8,
+            "parentIndex": 4562,
+            "atomicNumber": 6,
+            "position": [
+              37.961,
+              -51.158,
+              25.059
+            ]
+          },
+          {
+            "index": 9,
+            "parentIndex": 4563,
+            "atomicNumber": 6,
+            "position": [
+              37.176,
+              -49.441,
+              26.565
+            ]
+          },
+          {
+            "index": 10,
+            "parentIndex": 4564,
+            "atomicNumber": 6,
+            "position": [
+              37.789,
+              -49.813,
+              25.38
+            ]
+          },
+          {
+            "index": 11,
+            "parentIndex": 4565,
+            "atomicNumber": 8,
+            "position": [
+              38.231,
+              -48.84,
+              24.498
+            ]
+          }
+        ],
+        "residue": "TYR596.A",
+        "graphSha256": "a42cd4de8f10f4a00fbd91bd8e4241a5e2946b16cc186d434636e64d07f6d65c"
+      },
+      "expected": [
+        {
+          "interaction": "ImplicitHBDonor",
+          "indices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              11
+            ]
+          },
+          "parentIndices": {
+            "ligand": [
+              1
+            ],
+            "protein": [
+              4565
+            ]
+          },
+          "distance": 2.493117927415386,
+          "geometry": {
+            "ideal_acceptor_angle": 120.0,
+            "acceptor_atom_angles": [
+              109.9411622604433
+            ],
+            "acceptor_atom_angle_deviation": 10.058837739556694,
+            "acceptor_plane_angle": 13.647919400980538,
+            "ideal_donor_angle": 109.5,
+            "donor_atom_angles": [
+              134.19154674593352
+            ],
+            "donor_atom_angle_deviation": 24.691546745933522,
+            "vina_hbond_potential": 1.0
+          }
+        }
+      ],
+      "versions": {
+        "prolif": "2.2.1",
+        "rdkit": "2025.03.6",
+        "prolifPath": "/home/ruh/miniconda3/envs/xymol/lib/python3.11/site-packages/prolif/__init__.py",
+        "python": "3.11.6 | packaged by conda-forge | (main, Oct  3 2023, 11:57:02) [GCC 12.3.0]"
+      }
+    },
+    {
+      "pdb": "1wnu",
+      "rule": "ImplicitHBAcceptor",
+      "kind": "errors",
+      "ligand": {
+        "molblock": "\n     RDKit          3D\n\n  7  6  0  0  0  0  0  0  0  0999 V2000\n   14.3590   56.6840   45.1470 N   0  0  0  0  0  0  0  0  0  0  0  0\n   14.7440   57.1780   43.8350 C   0  0  2  0  0  0  0  0  0  0  0  0\n   14.2290   58.6190   43.6530 C   0  0  0  0  0  0  0  0  0  0  0  0\n   14.3310   59.4200   44.5840 O   0  0  0  0  0  0  0  0  0  0  0  0\n   14.1420   56.2740   42.7460 C   0  0  0  0  0  0  0  0  0  0  0  0\n   15.0810   56.1010   41.6900 O   0  0  0  0  0  0  0  0  0  0  0  0\n   13.7250   58.9750   42.6030 O   0  0  0  0  0  0  0  0  0  0  0  0\n  2  1  1  1\n  2  3  1  0\n  3  4  2  0\n  2  5  1  0\n  5  6  1  0\n  3  7  1  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 0,
+            "atomicNumber": 7,
+            "position": [
+              14.359,
+              56.684,
+              45.147
+            ]
+          },
+          {
+            "index": 1,
+            "parentIndex": 1,
+            "atomicNumber": 6,
+            "position": [
+              14.744,
+              57.178,
+              43.835
+            ]
+          },
+          {
+            "index": 2,
+            "parentIndex": 2,
+            "atomicNumber": 6,
+            "position": [
+              14.229,
+              58.619,
+              43.653
+            ]
+          },
+          {
+            "index": 3,
+            "parentIndex": 3,
+            "atomicNumber": 8,
+            "position": [
+              14.331,
+              59.42,
+              44.584
+            ]
+          },
+          {
+            "index": 4,
+            "parentIndex": 4,
+            "atomicNumber": 6,
+            "position": [
+              14.142,
+              56.274,
+              42.746
+            ]
+          },
+          {
+            "index": 5,
+            "parentIndex": 5,
+            "atomicNumber": 8,
+            "position": [
+              15.081,
+              56.101,
+              41.69
+            ]
+          },
+          {
+            "index": 6,
+            "parentIndex": 6,
+            "atomicNumber": 8,
+            "position": [
+              13.725,
+              58.975,
+              42.603
+            ]
+          }
+        ],
+        "residue": "UNL1",
+        "graphSha256": "77d8b76f2e7ff9e75d4e79da0502913cc1a2061cfb13fe60e87f4dedbe1a29d3"
+      },
+      "protein": {
+        "molblock": "\n     RDKit          3D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n   17.0660   53.9280   41.6660 O   0  0  0  0  0  0  0  0  0  0  0  0\nM  END\n",
+        "atoms": [
+          {
+            "index": 0,
+            "parentIndex": 1240,
+            "atomicNumber": 8,
+            "position": [
+              17.066,
+              53.928,
+              41.666
+            ]
+          }
+        ],
+        "residue": "HOH1._",
+        "graphSha256": "97e7ed81f2f34747e8f5793bac4981f5ed9e80218cc62da723b57bd47ae38d33"
+      },
+      "expected": [],
+      "versions": {
+        "prolif": "2.2.1",
+        "rdkit": "2025.03.6",
+        "prolifPath": "/home/ruh/miniconda3/envs/xymol/lib/python3.11/site-packages/prolif/__init__.py",
+        "python": "3.11.6 | packaged by conda-forge | (main, Oct  3 2023, 11:57:02) [GCC 12.3.0]"
+      }
+    }
+  ]
+}
